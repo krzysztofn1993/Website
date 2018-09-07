@@ -119,9 +119,9 @@
   }
   .hamburger{
     width: 35px;
-    height: 14px;
+    height: 16px;
     position: absolute;
-    top: 12px;
+    top: 16px;
     right: 15px;
     cursor: pointer;
   }
