@@ -42,17 +42,21 @@
     text-decoration: none;
     color: SeaShell;
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
   }
 
   a:-moz-any-link {
     text-decoration: none;
     color: SeaShell;
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
   }
 
   a:any-link {
     text-decoration: none;
     color: SeaShell;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
   }
   .shutter{
     background: -webkit-linear-gradient(80deg, DeepSkyBlue, DarkBlue) no-repeat;
@@ -205,6 +209,7 @@
   }
   .article__title{
     padding: 20px 0;
+    font-weight: 500;
   }
 
   .gallery{
