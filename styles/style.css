@@ -36,7 +36,7 @@
     background: linear-gradient(95deg, DeepSkyBlue, DarkBlue) no-repeat;
     color: SeaShell;
     font-family: 'Poppins', sans-serif;
-    padding: 10% 5%;
+    padding: 5%;
   }
   a:-webkit-any-link {
     text-decoration: none;
@@ -186,7 +186,7 @@
   }
 
   #Home{
-    height:60vh;
+    height: 60vh;
     padding-top: 55px;
     z-index: 41;
   }
@@ -386,5 +386,21 @@
 @media only screen and (min-width: 120.063em){
   html {
      padding:0 20%;
+  }
+}
+@media only screen and (min-height: 52em){
+  body{
+    padding: 10% 5%;
+  }
+  #Home{
+    height: 65vh;
+  }
+}
+@media only screen and (min-height: 62em){
+  body{
+    padding: 25% 5%;
+  }
+  #Home{
+    height: 65vh;
   }
 }
