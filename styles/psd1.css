@@ -92,7 +92,8 @@
     color: rgba(0,0,0,0.5);
     font-family: 'Cabin', sans-serif;
     line-height: 1.5em;
-    font-size: 1.2em;
+    font-size: 1em;
+    padding-left: 75px;
   }
   textarea{
     resize: none;
