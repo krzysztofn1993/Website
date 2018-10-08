@@ -4,6 +4,73 @@
 @media only screen {
   // e6eced   /   5a5f69   / 86ad9e   /   c47776   /    282e3c
   .body-wrapper{
-    background-color: #282e3c;
+    background: #1C1C1C;
   }
+
+  .content-layout{
+    position: relative;
+    width: 100%;
+    min-height: 768px;
+    max-height: 100%;
+    &:nth-child(even){
+      background-color: Gainsboro; //#DCDCDC
+    }
+  }
+
+  .welcome-text{
+    margin: 0;
+    position: absolute;
+    width: 30%;
+    height: auto;
+    border: 1px dashed red;
+    top: 30%;
+    left: 25%;
+      &-content{
+        margin: 0;
+      }
+  }
+
+  .paral-element{ // paralax elements
+    position: absolute;
+
+    & *{
+      z-index: 1;
+      height: auto;
+    }
+
+    // laptop image
+    &-lap{
+      width: 100%;
+      filter: drop-shadow(40px -4px 0px rgba(0,0,0,0.4));
+      &--position{
+        top: 25%;
+        left: 65%;
+        width: 20%;
+        }
+      }// end of laptop image
+
+
+    &-bloom{ // bloom image
+      width: 100%;
+      filter: blur(3px) drop-shadow(80px -16px 0px rgba(0,0,0,0.4));
+      &--position{
+        top: -20%;
+        left: -20%;
+        width: 40%;
+      }
+    } //end of bloom
+
+
+    &-note{ // note image
+      width: 100%;
+      filter: blur(1px) drop-shadow(1px 1px 4px rgba(0,0,0, 0.4));
+      &--position{
+        top: 70%;
+        left: 25%;
+        width: 15%;
+      }
+    } // end of note image
+
+
+  } // end of paral-element
 }

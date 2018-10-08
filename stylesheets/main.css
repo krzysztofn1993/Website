@@ -423,17 +423,17 @@ html {
  * Basic styles for links
  */
 a {
-  color: #c47776;
+  color: #32353C;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #D59C9A;
+    color: #32353C;
     text-decoration: underline; }
 
 /**
  * Basic typography style for copy text
  */
 body {
-  color: #D59C9A;
+  color: #32353C;
   font: normal 100%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 /**
@@ -491,9 +491,17 @@ body {
   position: absolute;
   width: 1px; }
 
+.head-fix {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  z-index: 2; }
+
 .menu {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   margin: 0;
   padding: 10px 0 15px 0; }
@@ -507,12 +515,60 @@ body {
     border-radius: 6px; }
 
 .beam {
-  width: 100%;
+  margin-left: 50%;
+  width: 50%;
   height: 15px;
-  background-color: #D59C9A; }
+  background-color: #1C1C1C;
+  z-index: 0; }
 
 @media only screen {
   .body-wrapper {
-    background-color: #282e3c; } }
+    background: #1C1C1C; }
+
+  .content-layout {
+    position: relative;
+    width: 100%;
+    min-height: 768px;
+    max-height: 100%; }
+    .content-layout:nth-child(even) {
+      background-color: Gainsboro; }
+
+  .welcome-text {
+    margin: 0;
+    position: absolute;
+    width: 30%;
+    height: auto;
+    border: 1px dashed red;
+    top: 30%;
+    left: 25%; }
+    .welcome-text-content {
+      margin: 0; }
+
+  .paral-element {
+    position: absolute; }
+    .paral-element * {
+      z-index: 1;
+      height: auto; }
+    .paral-element-lap {
+      width: 100%;
+      filter: drop-shadow(40px -4px 0px rgba(0, 0, 0, 0.4)); }
+      .paral-element-lap--position {
+        top: 25%;
+        left: 65%;
+        width: 20%; }
+    .paral-element-bloom {
+      width: 100%;
+      filter: blur(3px) drop-shadow(80px -16px 0px rgba(0, 0, 0, 0.4)); }
+      .paral-element-bloom--position {
+        top: -20%;
+        left: -20%;
+        width: 40%; }
+    .paral-element-note {
+      width: 100%;
+      filter: blur(1px) drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.4)); }
+      .paral-element-note--position {
+        top: 70%;
+        left: 25%;
+        width: 15%; } }
 
 /*# sourceMappingURL=main.css.map */
