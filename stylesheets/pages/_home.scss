@@ -1,66 +1,9 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-// e6eced   /   5a5f69   / 86ad9e   /   c47776   /    282e3c
 @media only screen {
+  // e6eced   /   5a5f69   / 86ad9e   /   c47776   /    282e3c
   .body-wrapper{
-    margin: 40px auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    max-width: 600px;
-    width: 60%;
-    min-width: 18.75em;
-    height: auto;
-  }
-  .section-content-styling{
-    text-align: justify;
-    text-indent: 20px;
-  }
-  .pallete{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    &__text{
-      text-align: center;
-    }
-  }
-  .colors{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0 auto;
-    width: 60%;
-    max-width: 400px;
-    height: 150px;
-    flex-wrap: wrap;
-    &__element{
-      margin: 10px;
-      flex:1;
-      border-radius: 25px;
-      &:nth-child(1){
-        background-color: #86ad9e;
-      }
-      &:nth-child(2){
-        background-color: #c47776;
-      }
-      &:nth-child(3){
-        background-color: #282e3c;
-      }
-    }
-  }
-}
-@media only screen and (max-width: 25em) {
-  .body-wrapper{
-    padding: 0 5%;
-  }
-  .colors{
-    height: 75px;
-  }
-}
-@media only screen and (min-width:25em) and (max-width: 50em) {
-  .colors{
-    height: 100px;
+    background-color: #282e3c;
   }
 }

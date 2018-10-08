@@ -1,7 +1,25 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-
-.header--styling{
-  text-align: center;
+.menu{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 10px 0 15px 0;
+  &__element{
+    padding: 0 8px;
+    text-align: center;
+    margin: 0 20px;
+    display: inline;
+  }
+  .active{
+    border-bottom: 3px solid SeaShell;
+    border-radius: 6px;
+  }
+}
+.beam{
+  width: 100%;
+  height: 15px;
+  background-color: #D59C9A;
 }

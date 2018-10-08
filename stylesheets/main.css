@@ -426,14 +426,14 @@ a {
   color: #c47776;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #282e3c;
+    color: #D59C9A;
     text-decoration: underline; }
 
 /**
  * Basic typography style for copy text
  */
 body {
-  color: #282e3c;
+  color: #D59C9A;
   font: normal 100%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 /**
@@ -491,59 +491,28 @@ body {
   position: absolute;
   width: 1px; }
 
-.header--styling {
-  text-align: center; }
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 10px 0 15px 0; }
+  .menu__element {
+    padding: 0 8px;
+    text-align: center;
+    margin: 0 20px;
+    display: inline; }
+  .menu .active {
+    border-bottom: 3px solid SeaShell;
+    border-radius: 6px; }
+
+.beam {
+  width: 100%;
+  height: 15px;
+  background-color: #D59C9A; }
 
 @media only screen {
   .body-wrapper {
-    margin: 40px auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    max-width: 600px;
-    width: 60%;
-    min-width: 18.75em;
-    height: auto; }
-
-  .section-content-styling {
-    text-align: justify;
-    text-indent: 20px; }
-
-  .pallete {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    .pallete__text {
-      text-align: center; }
-
-  .colors {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0 auto;
-    width: 60%;
-    max-width: 400px;
-    height: 150px;
-    flex-wrap: wrap; }
-    .colors__element {
-      margin: 10px;
-      flex: 1;
-      border-radius: 25px; }
-      .colors__element:nth-child(1) {
-        background-color: #86ad9e; }
-      .colors__element:nth-child(2) {
-        background-color: #c47776; }
-      .colors__element:nth-child(3) {
-        background-color: #282e3c; } }
-@media only screen and (max-width: 25em) {
-  .body-wrapper {
-    padding: 0 5%; }
-
-  .colors {
-    height: 75px; } }
-@media only screen and (min-width: 25em) and (max-width: 50em) {
-  .colors {
-    height: 100px; } }
+    background-color: #282e3c; } }
 
 /*# sourceMappingURL=main.css.map */
