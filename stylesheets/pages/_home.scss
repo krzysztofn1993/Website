@@ -6,7 +6,6 @@
   .body-wrapper{
     background: #1C1C1C;
   }
-
   .content-layout{
     position: relative;
     width: 100%;
@@ -22,7 +21,7 @@
     position: absolute;
     width: 30%;
     height: auto;
-    border: 1px dashed red;
+    // border: 1px dashed red;
     top: 30%;
     left: 25%;
       &-content{
@@ -41,33 +40,36 @@
     // laptop image
     &-lap{
       width: 100%;
-      filter: drop-shadow(40px -4px 0px rgba(0,0,0,0.4));
+      filter: drop-shadow(60px -4px 2px rgba(0,0,0,0.4));
       &--position{
-        top: 25%;
-        left: 65%;
-        width: 20%;
+        transform: rotate(-20deg);
+        top: 12%;
+        left: 64%;
+        width: 35%;
         }
       }// end of laptop image
 
 
     &-bloom{ // bloom image
       width: 100%;
-      filter: blur(3px) drop-shadow(80px -16px 0px rgba(0,0,0,0.4));
+      filter: blur(0px) drop-shadow(40px -4px 2px rgba(0,0,0,0.4));
       &--position{
-        top: -20%;
-        left: -20%;
-        width: 40%;
+        top: -10%;
+        left: -10%;
+        width: 27%;
       }
     } //end of bloom
 
 
-    &-note{ // note image
+    &-coffee{ // note image
       width: 100%;
-      filter: blur(1px) drop-shadow(1px 1px 4px rgba(0,0,0, 0.4));
+      filter: blur(0px) drop-shadow(40px -4px 2px rgba(0,0,0, 0.4));
       &--position{
-        top: 70%;
-        left: 25%;
-        width: 15%;
+        // opacity: 0.3;
+        top: 63%;
+        // transform: rotate(45deg);
+        left: 11%;
+        width: 14%;
       }
     } // end of note image
 

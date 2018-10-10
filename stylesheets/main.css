@@ -519,6 +519,7 @@ body {
   width: 50%;
   height: 15px;
   background-color: #1C1C1C;
+  border-radius: 0 0 0 15px;
   z-index: 0; }
 
 @media only screen {
@@ -538,7 +539,6 @@ body {
     position: absolute;
     width: 30%;
     height: auto;
-    border: 1px dashed red;
     top: 30%;
     left: 25%; }
     .welcome-text-content {
@@ -551,24 +551,25 @@ body {
       height: auto; }
     .paral-element-lap {
       width: 100%;
-      filter: drop-shadow(40px -4px 0px rgba(0, 0, 0, 0.4)); }
+      filter: drop-shadow(60px -4px 2px rgba(0, 0, 0, 0.4)); }
       .paral-element-lap--position {
-        top: 25%;
-        left: 65%;
-        width: 20%; }
+        transform: rotate(-20deg);
+        top: 12%;
+        left: 64%;
+        width: 35%; }
     .paral-element-bloom {
       width: 100%;
-      filter: blur(3px) drop-shadow(80px -16px 0px rgba(0, 0, 0, 0.4)); }
+      filter: blur(0px) drop-shadow(40px -4px 2px rgba(0, 0, 0, 0.4)); }
       .paral-element-bloom--position {
-        top: -20%;
-        left: -20%;
-        width: 40%; }
-    .paral-element-note {
+        top: -10%;
+        left: -10%;
+        width: 27%; }
+    .paral-element-coffee {
       width: 100%;
-      filter: blur(1px) drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.4)); }
-      .paral-element-note--position {
-        top: 70%;
-        left: 25%;
-        width: 15%; } }
+      filter: blur(0px) drop-shadow(40px -4px 2px rgba(0, 0, 0, 0.4)); }
+      .paral-element-coffee--position {
+        top: 63%;
+        left: 11%;
+        width: 14%; } }
 
 /*# sourceMappingURL=main.css.map */

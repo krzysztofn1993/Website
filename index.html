@@ -5,6 +5,12 @@
     <title>Krzysztof Nowak | Front-end Dev</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="stylesheets/main.css">
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous">
+    </script>
+
   </head>
   <body>
     <div class="body-wrapper">
@@ -25,20 +31,20 @@
 
       <section class="content-layout" id="Home">
           <div class="welcome-text">
-            <h1 class="welcome-text-content">Welcome!</h1>
+            <h1 class="welcome-text-content">Welcome!<br /> Karolka babolka hehehe</h1>
           </div>
-          <div class="paral-element paral-element-lap--position">
+          <div class="paral-element paral-element-lap--position" data-paral="true">
             <img class="paral-element-lap" src="images/lap.png">
           </div>
-          <div class="paral-element paral-element-bloom--position">
+          <div class="paral-element paral-element-bloom--position" data-paral="true">
             <img class="paral-element-bloom" src="images/bloom.png">
           </div>
-          <div class="paral-element paral-element-note--position">
-            <img class="paral-element-note" src="images/note.png">
+          <div class="paral-element paral-element-coffee--position" data-paral="true">
+            <img class="paral-element-coffee" src="images/coffee.png">
           </div>
 
       </section>
-      <section class="content-layout">
+      <section class="content-layout" id="aboutMe">
       </section>
       <section class="content-layout">
       </section>
@@ -46,6 +52,6 @@
       </section>
 
     </div>
-
+    <script src="scripts/main.js"></script>
   </body>
 </html>
