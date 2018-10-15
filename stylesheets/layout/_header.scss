@@ -1,36 +1,63 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-.head-fix{
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: auto;
-  z-index: 2;
-}
-.menu{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 10px 0 15px 0;
-  &__element{
-    padding: 0 8px;
-    text-align: center;
-    margin: 0 20px;
-    display: inline;
-  }
-  .active{
-    border-bottom: 3px solid SeaShell;
-    border-radius: 6px;
-  }
-}
-.beam{
-  margin-left: 50%;
-  width: 50%;
-  height: 15px;
-  background-color: #1C1C1C;
-  border-radius: 0 0 0 15px;
-  z-index: 0;
-}
+// .head-fix{
+//   position: absolute;
+//   top: 10px;
+//   width: 100%;
+//   height: auto;
+//   z-index: 2;
+// }
+// .menu{
+//   width: 100%;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: flex-end;
+//   margin: 0;
+//   &__element{
+//     padding: 0 8px;
+//     text-align: center;
+//     margin: 0 20px;
+//     display: inline;
+//   }
+//   .active{
+//     // border-left: 3px solid SeaShell;
+//     border-left: 3px solid #ff6347;
+//     border-right: 3px solid #ff6347;
+//     // border-radius: 50%;
+//   }
+// }
+// .beam{
+//   margin-left: 0%;
+//   width: 50%;
+//   height: 15px;
+//   background-color: #ff6347;
+//   border-radius: 0 0 0 15px;
+//   z-index: 0;
+// }
+//
+// @media only screen and (max-width: 20em){
+//   .menu{
+//     margin: 0 auto;
+//     justify-content: space-around;
+//     flex-direction: column;
+//     &__element{
+//       padding: 0 8px;
+//       margin: 10px auto;
+//       text-align: center;
+//       display: block;
+//     }
+//     .active{
+//       // border-bottom: 3px solid SeaShell;
+//       // border-radius: 0px;
+//     }
+//   }
+//   .beam{
+//     margin-left: 0%;
+//     width: 50%;
+//     height: 15px;
+//     background-color: #ff6347;
+//     border-radius: 0 0 0 15px;
+//     z-index: 0;
+//   }
+// }

@@ -2,7 +2,9 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
+$project-tile-w: 350px;
+$project-tile-h: $project-tile-w * (17/25);
+$project-tile-h-small: 184;
 
 
 
@@ -20,11 +22,11 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
 /// Copy text color
 /// @type Color
-$text-color: #32353C !default;
+$text-color: white !default;
 
 /// Main brand color
 /// @type Color
-$brand-color: #32353C !default;
+$brand-color: white !default;
 
 /// Light grey
 /// @type Color
@@ -54,15 +56,12 @@ $max-width: 1180px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+  'small': 20em,
+  'medium': 76.8em,
+  'large': 102.4em,
 ) !default;
 
-
-
-
-
+$projects-names: cssAnim500 followingText500 PSD500 rain500 ttt500;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

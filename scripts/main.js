@@ -2,14 +2,14 @@
   // body...
   var elements = {
     cachedDom: function(){
-      this.$lap = $('.paral-element-lap--position');
-      this.$bloom = $('.paral-element-bloom--position');
-      this.$coffee = $('.paral-element-coffee--position');
-      this.$about = $('#aboutMe');
-      this.$lapOffset = this.$lap.offset().top;
+      this.$device = $('.paral-element__device--position');
+      this.$bloom = $('.paral-element__bloom--position');
+      this.$coffee = $('.paral-element__coffee--position');
+      this.$paral = $('.moving-part');
+      this.$deviceOffset = this.$device.offset().top;
       this.$bloomOffset = this.$bloom.offset().top;
       this.$coffeeOffset = this.$coffee.offset().top;
-      this.$aboutOffset = this.$about.offset().top;
+      this.$paralOffset = this.$paral.offset().top;
     },
     init: function(){
       this.cachedDom();
@@ -17,20 +17,20 @@
       this.render();
     },
     bindEvents: function(){
-      $(window).scroll( throttled(100, this.updatePosition.bind(this)));
+      $(window).scroll( throttled(50, this.updatePosition.bind(this)));
     },
     render: function(){
-      this.$lap.offset({top: this.$lapMove});
+      this.$device.offset({top: this.$deviceMove});
       this.$bloom.offset({top: this.$bloomMove});
       this.$coffee.offset({top: this.$coffeeMove});
-      this.$about.offset({top: this.$aboutMove});
+      this.$paral.offset({top: this.$paralMove});
     },
     updatePosition: function(){
       this.$windowScroll = $(window).scrollTop();
-      this.$lapMove =  this.$lapOffset + this.$windowScroll/6;
+      this.$deviceMove =  this.$deviceOffset + this.$windowScroll/6;
       this.$bloomMove = this.$bloomOffset + this.$windowScroll/4;
       this.$coffeeMove = this.$coffeeOffset + this.$windowScroll/9;
-      this.$aboutMove = this.$aboutOffset - this.$windowScroll/3;
+      this.$paralMove = this.$paralOffset - this.$windowScroll/3;
       this.render();
     }
   };

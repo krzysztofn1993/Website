@@ -1,0 +1,44 @@
+.projects-wrap__tile{
+  width: $project-tile-w;
+  height: $project-tile-h;
+  margin: 10px;
+  border-radius: 20px;
+  position: relative;
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}){
+      background: linear-gradient(45deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01)),
+      url('../images/#{nth($projects-names, $i)}.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+
+    }
+  }
+  &__button{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:nth-child(1){
+      left: -50%;
+      border-radius: 20px 0 0 20px;
+    }
+    &:nth-child(2){
+      left: 100%;
+      border-radius: 0 20px 20px 0;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 20em){
+  .projects-wrap__tile{
+    width: 100%;
+    height: $project-tile-h-small + px;
+    margin: 0 0 20px 0 ;
+  }
+}

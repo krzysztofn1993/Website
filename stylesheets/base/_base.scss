@@ -7,6 +7,13 @@
  */
 html {
   box-sizing: border-box;
+  font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
 /**
@@ -18,9 +25,18 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-}
 
+  box-sizing: border-box;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  // border: 1px dashed red;
+}
+p{
+  text-indent: 15px;
+  text-align: justify;
+}
 /**
  * Basic styles for links
  */

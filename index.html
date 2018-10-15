@@ -10,11 +10,15 @@
       integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
       crossorigin="anonymous">
     </script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
   </head>
   <body>
     <div class="body-wrapper">
-      <header class="head-fix">
+
+
+
+      <!-- <header class="head-fix">
         <nav>
           <ul class="menu">
             <li class="menu__element active"><a href="#">Home</a></li>
@@ -25,31 +29,57 @@
         </nav>
         <div class="beam">
         </div>
-      </header>
+      </header> -->
 
 
 
       <section class="content-layout" id="Home">
           <div class="welcome-text">
-            <h1 class="welcome-text-content">Welcome!<br /> Karolka babolka hehehe</h1>
+            <h1 class="welcome-text__content"><span class="border-lr">Welcome!</span></h1><p>Nice to meet you.
+            <br />Let me show you what I do...</p>
           </div>
-          <div class="paral-element paral-element-lap--position" data-paral="true">
-            <img class="paral-element-lap" src="images/lap.png">
+          <div class="paral-element paral-element__device--position" data-paral="true">
+            <div class="paral-element__device"></div>
           </div>
-          <div class="paral-element paral-element-bloom--position" data-paral="true">
-            <img class="paral-element-bloom" src="images/bloom.png">
+          <div class="paral-element paral-element__bloom--position" data-paral="true">
+            <img class="paral-element__bloom" src="images/bloom.png">
           </div>
-          <div class="paral-element paral-element-coffee--position" data-paral="true">
-            <img class="paral-element-coffee" src="images/coffee.png">
+          <div class="paral-element paral-element__coffee--position" data-paral="true">
+            <img class="paral-element__coffee" src="images/coffee.png">
           </div>
 
       </section>
-      <section class="content-layout" id="aboutMe">
-      </section>
-      <section class="content-layout">
-      </section>
-      <section class="content-layout">
-      </section>
+      <div class="moving-part">
+        <section class="content-layout" id="Projects">
+          <h2 class="section-title section-title--basic"><span class="border-lr">My projects</span></h2>
+          <div class="in-section-layout">
+            <div class="projects-wrap">
+              <div class="projects-wrap__tile">
+                <div class="projects-wrap__tile__button"><p>Live</p></div>
+                <div class="projects-wrap__tile__button"><p>Code</p></div>
+              </div>
+              <div class="projects-wrap__tile">
+                <div class="projects-wrap__tile__button"><p>Live</p></div>
+                <div class="projects-wrap__tile__button"><p>Code</p></div>
+              </div>
+              <div class="projects-wrap__tile">
+                <div class="projects-wrap__tile__button"><p>Live</p></div>
+                <div class="projects-wrap__tile__button"><p>Code</p></div>
+              </div>
+              <div class="projects-wrap__tile">
+                <div class="projects-wrap__tile__button"><p>Live</p></div>
+                <div class="projects-wrap__tile__button"><p>Code</p></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="content-layout" id="aboutMe">
+          <h2 class="section-title section-title--basic"><span class="border-lr">About me</span></h2>
+          <div class="in-section-layout">
+            <p>My name is <strong>Krzysztof Nowak</strong> and I am learning to become <strong>Web Dev</strong>. I made this site from scratch and it is my main project which I am still developing. In the project tab you will find other projects which hopefully will show you my <strong>OOP and Web Development knowledge</strong>.</p>
+          </div>
+        </section>
+      </div>
 
     </div>
     <script src="scripts/main.js"></script>

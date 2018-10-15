@@ -2,18 +2,23 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 @media only screen {
-  // e6eced   /   5a5f69   / 86ad9e   /   c47776   /    282e3c
   .body-wrapper{
-    background: #1C1C1C;
+    height: 0px;
+  }
+  .border-lr{
+    border-left: 3px solid #69849c;
+    border-right: 3px solid #69849c;
+    padding: 0 10px;
   }
   .content-layout{
+    padding: 0% 5% 5%;
     position: relative;
-    width: 100%;
-    min-height: 768px;
-    max-height: 100%;
-    &:nth-child(even){
-      background-color: Gainsboro; //#DCDCDC
-    }
+    min-height: 101vh;
+    color: #424242;
+    background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
+                linear-gradient(45deg, transparent 60%, #699C81 60% ),
+                #dcdcdc; //#DCDCDC
+
   }
 
   .welcome-text{
@@ -21,12 +26,27 @@
     position: absolute;
     width: 30%;
     height: auto;
-    // border: 1px dashed red;
     top: 30%;
     left: 25%;
-      &-content{
+      &__content{
         margin: 0;
+        font-size: 4em;
       }
+  }
+
+  .moving-part{
+    .content-layout{
+      &:nth-child(even){
+        color: #424242;
+        background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
+        #dcdcdc;
+      }
+      &:nth-child(odd){
+        color: SeaShell;
+        background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
+        #333333;
+      }
+    }
   }
 
   .paral-element{ // paralax elements
@@ -37,23 +57,28 @@
       height: auto;
     }
 
-    // laptop image
-    &-lap{
-      width: 100%;
-      filter: drop-shadow(60px -4px 2px rgba(0,0,0,0.4));
+    // devicetop image
+    &__device{
+      width: 500px;
+      height: 500px;
+      background-image: url('../images/lap.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      filter: drop-shadow(40px -2px 2px rgba(0,0,0,0.4));
       &--position{
         transform: rotate(-20deg);
         top: 12%;
         left: 64%;
-        width: 35%;
+
         }
-      }// end of laptop image
+      }// end of device top image
 
 
-    &-bloom{ // bloom image
+    &__bloom{ // bloom image
       width: 100%;
       filter: blur(0px) drop-shadow(40px -4px 2px rgba(0,0,0,0.4));
       &--position{
+        z-index: 2;
         top: -10%;
         left: -10%;
         width: 27%;
@@ -61,18 +86,106 @@
     } //end of bloom
 
 
-    &-coffee{ // note image
+    &__coffee{ // note image
       width: 100%;
       filter: blur(0px) drop-shadow(40px -4px 2px rgba(0,0,0, 0.4));
       &--position{
-        // opacity: 0.3;
         top: 63%;
-        // transform: rotate(45deg);
         left: 11%;
         width: 14%;
       }
     } // end of note image
 
-
   } // end of paral-element
+
+  .section-title{
+    padding: 50px 0;
+    &--basic{
+      text-align: center;
+      font-size: 3em;
+    }
+  }
+
+  .in-section-layout{
+    width: 80%;
+    margin: 0 auto;
+    // min-height: 101vh;
+  }
+  .projects-wrap{
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 40px;
+  }
+} // end of only screen
+
+@media only screen and (max-width: 20em){
+  .content-layout{
+    padding: 0 3%;
+  }
+
+  .welcome-text{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 24%;
+    left: 0%;
+      &__content{
+        margin: 0;
+        font-size: 2.5em;
+      }
+  }
+
+  .paral-element{ // paralax elements
+    // devicetop image
+    &__device{
+      background-image: url('../images/phone.png');
+      width: 100%;
+      height: 150px;
+      filter: drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
+      &--position{
+        transform: rotate(10deg);
+        top: 50%;
+        left: 50%;
+        width: 22%;
+        }
+      }// end of devicetop image
+
+    &__bloom{ // bloom image
+      width: 100%;
+      filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
+      &--position{
+        z-index: 2;
+        top: -17%;
+        left: -27%;
+        width: 69%;
+      }
+    } //end of bloom
+
+
+    &__coffee{ // note image
+      width: 100%;
+      filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0, 0.4));
+      &--position{
+        top: 50%;
+        left: 8%;
+        width: 25%;
+      }
+    } // end of note image
+  }
+
+  .section-title{
+    font-size: 2em;
+  }
+  .in-section-layout{
+    width: 90%;
+  }
+  .projects-wrap{
+    flex-direction: column;
+  }
+
 }
