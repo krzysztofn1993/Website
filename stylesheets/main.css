@@ -621,7 +621,7 @@ body {
     display: flex; }
     .flex-column-layout__left {
       display: flex;
-      align-items: space-around;
+      align-items: center;
       flex: 1; }
     .flex-column-layout__right {
       text-align: center;
@@ -718,10 +718,16 @@ body {
       top: 50%;
       left: 48%; } }
 @media only screen and (min-width: 40em) {
+  .text {
+    font-size: 1.4em; }
+
   .paral-element__bloom--position {
     top: -12%;
     left: -15%; } }
 @media only screen and (min-width: 64em) {
+  .text {
+    font-size: 1.6rem; }
+
   .welcome-text {
     left: 35%;
     top: 27%; }

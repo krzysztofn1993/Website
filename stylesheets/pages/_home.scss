@@ -16,7 +16,6 @@
   #welcome-section{
     overflow: hidden;
   }
-//do poprawy :)
 
   .content-layout{
     padding: 0% 5% 5%;
@@ -125,7 +124,7 @@
     display: flex;
     &__left{
       display: flex;
-      align-items: space-around;
+      align-items: center;
       flex: 1;
     }
     &__right{
@@ -288,6 +287,9 @@
 
 }
 @media only screen and (min-width: 40em) {
+  .text{
+    font-size: 1.4em;
+  }
   .paral-element{
     &__bloom{
       &--position{
@@ -299,6 +301,9 @@
   }
 }
 @media only screen and (min-width: 64em) {
+  .text{
+    font-size: 1.6rem;
+  }
   .welcome-text{
     left: 35%;
     top: 27%;
