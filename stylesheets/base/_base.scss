@@ -14,8 +14,11 @@ html {
   padding: 0;
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
+  text-align: justify;
 }
-
+body{
+  background: #dfdfdf;
+}
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -25,17 +28,13 @@ html {
 *,
 *::before,
 *::after {
-
+  text-align: inherit;
   box-sizing: border-box;
   font-size: inherit;
   margin: 0;
   padding: 0;
   font-family: inherit;
   // border: 1px dashed red;
-}
-p{
-  text-indent: 15px;
-  text-align: justify;
 }
 /**
  * Basic styles for links

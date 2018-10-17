@@ -413,7 +413,11 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+  text-align: justify; }
+
+body {
+  background: #dfdfdf; }
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -424,15 +428,12 @@ html {
 *,
 *::before,
 *::after {
+  text-align: inherit;
   box-sizing: border-box;
   font-size: inherit;
   margin: 0;
   padding: 0;
   font-family: inherit; }
-
-p {
-  text-indent: 15px;
-  text-align: justify; }
 
 /**
  * Basic styles for links
@@ -506,87 +507,82 @@ body {
   position: absolute;
   width: 1px; }
 
-.projects-wrap__tile {
-  width: 350px;
-  height: 238px;
+.projects-gallery__tile {
+  width: calc(33% - 20px);
   margin: 10px;
-  border-radius: 20px;
   position: relative; }
-  .projects-wrap__tile:nth-child(1) {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01)), url("../images/cssAnim500.png");
-    background-size: contain;
-    background-repeat: no-repeat; }
-  .projects-wrap__tile:nth-child(2) {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01)), url("../images/followingText500.png");
-    background-size: contain;
-    background-repeat: no-repeat; }
-  .projects-wrap__tile:nth-child(3) {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01)), url("../images/PSD500.png");
-    background-size: contain;
-    background-repeat: no-repeat; }
-  .projects-wrap__tile:nth-child(4) {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01)), url("../images/rain500.png");
-    background-size: contain;
-    background-repeat: no-repeat; }
-  .projects-wrap__tile:nth-child(5) {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01)), url("../images/ttt500.png");
-    background-size: contain;
-    background-repeat: no-repeat; }
-  .projects-wrap__tile__button {
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    transition: all 1s;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .projects-wrap__tile__button:nth-child(1) {
-      left: -50%;
-      border-radius: 20px 0 0 20px; }
-    .projects-wrap__tile__button:nth-child(2) {
-      left: 100%;
-      border-radius: 0 20px 20px 0; }
+.projects-gallery__button {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .projects-gallery__button:nth-child(1) {
+    left: -50%;
+    border-radius: 20px 0 0 20px; }
+  .projects-gallery__button:nth-child(2) {
+    left: 100%;
+    border-radius: 0 20px 20px 0; }
+.projects-gallery__img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border-left: 3px solid black;
+  border-right: 3px solid black; }
 
-@media only screen and (max-width: 20em) {
-  .projects-wrap__tile {
-    width: 100%;
-    height: 184px;
-    margin: 0 0 20px 0; } }
 @media only screen {
   .body-wrapper {
-    height: 0px; }
+    max-width: 1700px;
+    height: 0;
+    margin: 0 auto; }
 
   .border-lr {
     border-left: 3px solid #69849c;
     border-right: 3px solid #69849c;
     padding: 0 10px; }
 
+  #welcome-section {
+    overflow: hidden; }
+
   .content-layout {
     padding: 0% 5% 5%;
+    overflow-x: hidden;
     position: relative;
-    min-height: 101vh;
+    min-height: 100vh;
     color: #424242;
     background: linear-gradient(to top right, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0)), linear-gradient(45deg, transparent 60%, #699C81 60%), #dcdcdc; }
+    .content-layout__title {
+      padding: 50px 0; }
+      .content-layout__title--primary {
+        text-align: center;
+        font-size: 3em; }
 
   .welcome-text {
-    margin: 0;
     position: absolute;
-    width: 30%;
+    width: auto;
     height: auto;
-    top: 30%;
-    left: 25%; }
+    font-size: 1rem;
+    padding: 0;
+    top: 24%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%); }
     .welcome-text__content {
-      margin: 0;
-      font-size: 4em; }
+      margin: 20px 0;
+      font-size: 2.5rem; }
 
-  .moving-part .content-layout:nth-child(even) {
-    color: #424242;
-    background: linear-gradient(to top right, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0)), #dcdcdc; }
-  .moving-part .content-layout:nth-child(odd) {
-    color: SeaShell;
-    background: linear-gradient(to top right, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0)), #333333; }
+  .moving-sections-wrapper .content-layout {
+    min-height: 60vh; }
+    .moving-sections-wrapper .content-layout:nth-child(even) {
+      color: #424242;
+      background: linear-gradient(to top right, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0)), #dcdcdc; }
+    .moving-sections-wrapper .content-layout:nth-child(odd) {
+      color: SeaShell;
+      background: linear-gradient(to top right, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0)), #333333; }
 
   .paral-element {
     position: absolute; }
@@ -594,19 +590,18 @@ body {
       z-index: 1;
       height: auto; }
     .paral-element__device {
-      width: 500px;
-      height: 500px;
-      background-image: url("../images/lap.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      filter: drop-shadow(40px -2px 2px rgba(0, 0, 0, 0.4)); }
+      display: block;
+      content: url("../images/lap.png");
+      filter: blur(0px) drop-shadow(10px -4px 2px rgba(0, 0, 0, 0.4)); }
       .paral-element__device--position {
         transform: rotate(-20deg);
-        top: 12%;
-        left: 64%; }
+        top: 7%;
+        left: 64%;
+        width: 0%;
+        height: 0%; }
     .paral-element__bloom {
       width: 100%;
-      filter: blur(0px) drop-shadow(40px -4px 2px rgba(0, 0, 0, 0.4)); }
+      filter: blur(0px) drop-shadow(10px -4px 2px rgba(0, 0, 0, 0.4)); }
       .paral-element__bloom--position {
         z-index: 2;
         top: -10%;
@@ -614,78 +609,133 @@ body {
         width: 27%; }
     .paral-element__coffee {
       width: 100%;
-      filter: blur(0px) drop-shadow(40px -4px 2px rgba(0, 0, 0, 0.4)); }
+      filter: blur(0px) drop-shadow(10px -4px 2px rgba(0, 0, 0, 0.4)); }
       .paral-element__coffee--position {
         top: 63%;
         left: 11%;
         width: 14%; }
 
-  .section-title {
-    padding: 50px 0; }
-    .section-title--basic {
-      text-align: center;
-      font-size: 3em; }
-
-  .in-section-layout {
+  .flex-column-layout {
     width: 80%;
-    margin: 0 auto; }
-
-  .projects-wrap {
     margin: 0 auto;
-    width: 100%;
+    display: flex; }
+    .flex-column-layout__left {
+      display: flex;
+      align-items: space-around;
+      flex: 1; }
+    .flex-column-layout__right {
+      text-align: center;
+      flex: 1; }
+
+  .projects-gallery {
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     padding-bottom: 40px; } }
 @media only screen and (max-width: 20em) {
+  .paral-element__device {
+    width: 72px;
+    height: 150px; } }
+@media only screen and (max-width: 25em) and (min-width: 20em) {
+  .paral-element__device {
+    width: 84px;
+    height: 175px; } }
+@media only screen and (min-width: 20em) {
+  .welcome-text {
+    font-size: 1.4em; }
+    .welcome-text__content {
+      font-size: 3rem; } }
+@media only screen and (max-width: 35em) and (min-width: 25em) {
+  .paral-element__device {
+    width: 96px;
+    height: 200px; } }
+@media only screen and (max-width: 35em) {
   .content-layout {
     padding: 0 3%; }
-
-  .welcome-text {
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 24%;
-    left: 0%; }
-    .welcome-text__content {
-      margin: 0;
-      font-size: 2.5em; }
+    .content-layout__title {
+      font-size: 2em; }
 
   .paral-element__device {
-    background-image: url("../images/phone.png");
-    width: 100%;
-    height: 150px;
-    filter: drop-shadow(10px -4px 2px rgba(0, 0, 0, 0.4)); }
+    content: url("../images/phone.png"); }
     .paral-element__device--position {
       transform: rotate(10deg);
-      top: 50%;
-      left: 50%;
-      width: 22%; }
+      top: 60%;
+      left: 60%; }
   .paral-element__bloom {
-    width: 100%;
-    filter: blur(0px) drop-shadow(10px -4px 2px rgba(0, 0, 0, 0.4)); }
+    width: 100%; }
     .paral-element__bloom--position {
       z-index: 2;
-      top: -17%;
+      top: -14%;
       left: -27%;
-      width: 69%; }
+      width: 69%;
+      max-width: 400px;
+      min-width: 200px; }
   .paral-element__coffee {
-    width: 100%;
-    filter: blur(0px) drop-shadow(10px -4px 2px rgba(0, 0, 0, 0.4)); }
+    width: 100%; }
     .paral-element__coffee--position {
-      top: 50%;
+      top: 60%;
       left: 8%;
-      width: 25%; }
+      width: 25%;
+      min-width: 73px;
+      max-width: 112px; }
 
-  .section-title {
-    font-size: 2em; }
-
-  .in-section-layout {
-    width: 90%; }
+  .flex-column-layout {
+    width: 90%;
+    flex-direction: column; }
+    .flex-column-layout__right {
+      margin-top: 20px; }
 
   .projects-wrap {
-    flex-direction: column; } }
+    flex-direction: column; }
+
+  .projects-gallery__tile {
+    width: 100%;
+    margin: 0 auto 20px; } }
+@media only screen and (min-width: 48em) {
+  .welcome-text {
+    font-size: 1.6rem; }
+    .welcome-text__content {
+      font-size: 3.2rem; } }
+@media only screen and (min-width: 35em) {
+  .paral-element__coffee--position {
+    min-width: 112px;
+    left: 14%; }
+  .paral-element__bloom--position {
+    min-width: 360px;
+    max-width: 425px;
+    top: -13%;
+    left: -22%;
+    width: 38%; }
+  .paral-element__device {
+    width: 591px;
+    height: 600px; }
+    .paral-element__device--position {
+      top: 50%;
+      left: 48%; } }
+@media only screen and (min-width: 40em) {
+  .paral-element__bloom--position {
+    top: -12%;
+    left: -15%; } }
+@media only screen and (min-width: 64em) {
+  .welcome-text {
+    left: 35%;
+    top: 27%; }
+
+  .paral-element__device--position {
+    top: 35%; }
+  .paral-element__bloom--position {
+    left: -10%;
+    width: 40%; } }
+@media only screen and (min-width: 35em) and (max-width: 64em) {
+  .projects-gallery {
+    flex-direction: row; }
+    .projects-gallery__tile {
+      width: 45%;
+      margin: 0 auto 20px; } }
 
 /*# sourceMappingURL=main.css.map */

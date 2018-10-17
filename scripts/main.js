@@ -5,7 +5,7 @@
       this.$device = $('.paral-element__device--position');
       this.$bloom = $('.paral-element__bloom--position');
       this.$coffee = $('.paral-element__coffee--position');
-      this.$paral = $('.moving-part');
+      this.$paral = $('.moving-sections-wrapper');
       this.$deviceOffset = this.$device.offset().top;
       this.$bloomOffset = this.$bloom.offset().top;
       this.$coffeeOffset = this.$coffee.offset().top;
@@ -17,7 +17,7 @@
       this.render();
     },
     bindEvents: function(){
-      $(window).scroll( throttled(50, this.updatePosition.bind(this)));
+      $(window).scroll( throttled(100, this.updatePosition.bind(this)));
     },
     render: function(){
       this.$device.offset({top: this.$deviceMove});
