@@ -21,9 +21,9 @@ $(window).resize(()=>{
 function init(){
   console.log(width);
   if(width < 768){
-    $tiles.off('mouseenter mouseleave').on('click', render);
+    $tiles.off('mouseenter mouseleave focus blur').on('click', render);
   }else{
-    $tiles.off('click').on('mouseenter mouseleave', render);
+    $tiles.off('click').on('mouseenter mouseleave blur focus', render);
   }
 }
 return {
