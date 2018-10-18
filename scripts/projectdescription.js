@@ -8,7 +8,14 @@ let width = $(window).width();
 
 
 function render(e){
-    $(this).children('.projects-gallery__moving-part').toggleClass('description');
+  let children = $(this).children('.projects-gallery__moving-part');
+  if(e.type === 'click'){
+    children.toggleClass('description');
+  }else if (e.type === 'mouseenter'){
+    children.addClass('description');
+  }else{
+    children.removeClass('description');
+  }
 }
 
 $(window).resize(()=>{
@@ -21,9 +28,9 @@ $(window).resize(()=>{
 function init(){
   console.log(width);
   if(width < 768){
-    $tiles.off('mouseenter mouseleave focus blur').on('click', render);
+    $tiles.off('mouseenter mouseleave').on('click', render);
   }else{
-    $tiles.off('click').on('mouseenter mouseleave blur focus', render);
+    $tiles.off('click').on('mouseenter mouseleave', render);
   }
 }
 return {

@@ -594,7 +594,7 @@ body {
 
   #typewrite:after {
     content: ' |';
-    animation: typing 0.2s infinite ease-in-out alternate; }
+    animation: typing 0.2s infinite ease-in-out forwards; }
 
   @keyframes typing {
     0% {

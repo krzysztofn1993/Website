@@ -1,0 +1,501 @@
+:root{
+  --radius: 10px;
+  --cRadius: 100px;
+  --rotTime: 1s;
+}
+html{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 50px auto;
+  background: SeaShell;
+  font-family: 'Poppins', sans-serif;
+  height: auto;
+}
+.difTime{
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(150px,auto));
+  grid-template-rows: repeat(5,minmax(150px,auto));
+}
+.circle{
+  content: '';
+  height: var(--cRadius);
+  width: var(--cRadius);
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: calc(50% - var(--cRadius)/2);
+}
+.container1,.container2,.container3,.container4,.container5,.container6,.container7,.container8,.container9{
+  position: relative;
+}
+p{
+  margin: 0 auto;
+  text-align: center;
+}
+.difTime  p{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,calc(75px - 50%));
+}
+
+.dot{
+  width: var(--radius);
+  height: var(--radius);
+  position: absolute;
+  top: -10px;
+  left: calc(50% - var(--radius)/2);
+  background: red;
+  border-radius: 20%;
+  animation: move 20s ease-in-out infinite;
+}
+
+@keyframes rotR {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotL {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}
+@keyframes move {
+  0%,20%,40%,60%,80%,100%{
+    transform: translateY(0px);
+    border-radius: 50%;
+  }
+  10%,30%,50%,70%,90%{
+    transform: translateY(120px);
+    border-radius: 0%;
+  }
+}
+.container1{
+  grid-column: 1;
+}
+.container2{
+  grid-column: 2;
+}
+.container3{
+  grid-column: 1;
+  grid-row: 2;
+}
+.container4{
+  grid-column: 2;
+  grid-row: 2;
+}
+.container5{
+  grid-column: 1;
+  grid-row: 3;
+}
+.container6{
+  grid-column: 2;
+  grid-row: 3;
+}
+.container7{
+  grid-column: 1;
+  grid-row: 4;
+}
+.container8{
+  grid-column: 2;
+  grid-row: 4;
+}
+.container9{
+  grid-column: 1;
+  grid-row: 5;
+}
+.difTime > * > .circle:first-child {
+  border-bottom: 1px solid black;
+}
+
+.container1 > .circle:nth-child(1){
+  animation: rotR var(--rotTime) linear infinite;
+}
+.container1 > .circle:nth-child(3){
+  animation: rotR var(--rotTime) linear infinite 2s;
+}
+.container1 > .circle:nth-child(5){
+  animation: rotR var(--rotTime) linear infinite 4s;
+}
+.container1 > .circle:nth-child(7){
+  animation: rotR var(--rotTime) linear infinite 6s;
+}
+.container1 > .circle:nth-child(2){
+  animation: rotL var(--rotTime) linear infinite;
+}
+.container1 > .circle:nth-child(4){
+  animation: rotL var(--rotTime) linear infinite 2s;
+}
+.container1 > .circle:nth-child(6){
+  animation: rotL var(--rotTime) linear infinite 4s;
+}
+.container1 > .circle:nth-child(8){
+  animation: rotL var(--rotTime) linear infinite 6s;
+}
+
+.container2 > .circle:nth-child(1){
+  animation: rotR calc(1.2*var(--rotTime)) linear infinite;
+}
+.container2 > .circle:nth-child(3){
+  animation: rotR calc(1.2*var(--rotTime)) linear infinite 2s;
+}
+.container2 > .circle:nth-child(5){
+  animation: rotR calc(1.2*var(--rotTime)) linear infinite 4s;
+}
+.container2 > .circle:nth-child(7){
+  animation: rotR calc(1.2*var(--rotTime)) linear infinite 6s;
+}
+.container2 > .circle:nth-child(2){
+  animation: rotL calc(1.2*var(--rotTime)) linear infinite;
+}
+.container2 > .circle:nth-child(4){
+  animation: rotL calc(1.2*var(--rotTime)) linear infinite 2s;
+}
+.container2 > .circle:nth-child(6){
+  animation: rotL calc(1.2*var(--rotTime)) linear infinite 4s;
+}
+.container2 > .circle:nth-child(8){
+  animation: rotL calc(1.2*var(--rotTime)) linear infinite 6s;
+}
+
+.container3 > .circle:nth-child(1){
+  animation: rotR calc(2*var(--rotTime)) linear infinite;
+}
+.container3 > .circle:nth-child(3){
+  animation: rotR calc(2*var(--rotTime)) linear infinite 2s;
+}
+.container3 > .circle:nth-child(5){
+  animation: rotR calc(2*var(--rotTime)) linear infinite 4s;
+}
+.container3 > .circle:nth-child(7){
+  animation: rotR calc(2*var(--rotTime)) linear infinite 6s;
+}
+.container3 > .circle:nth-child(2){
+  animation: rotL calc(2*var(--rotTime)) linear infinite;
+}
+.container3 > .circle:nth-child(4){
+  animation: rotL calc(2*var(--rotTime)) linear infinite 2s;
+}
+.container3 > .circle:nth-child(6){
+  animation: rotL calc(2*var(--rotTime)) linear infinite 4s;
+}
+.container3 > .circle:nth-child(8){
+  animation: rotL calc(2*var(--rotTime)) linear infinite 6s;
+}
+
+.container4 > .circle:nth-child(1){
+  animation: rotR calc(4*var(--rotTime)) linear infinite;
+}
+.container4 > .circle:nth-child(3){
+  animation: rotR calc(4*var(--rotTime)) linear infinite 2s;
+}
+.container4 > .circle:nth-child(5){
+  animation: rotR calc(4*var(--rotTime)) linear infinite 4s;
+}
+.container4 > .circle:nth-child(7){
+  animation: rotR calc(4*var(--rotTime)) linear infinite 6s;
+}
+.container4 > .circle:nth-child(2){
+  animation: rotL calc(4*var(--rotTime)) linear infinite;
+}
+.container4 > .circle:nth-child(4){
+  animation: rotL calc(4*var(--rotTime)) linear infinite 2s;
+}
+.container4 > .circle:nth-child(6){
+  animation: rotL calc(4*var(--rotTime)) linear infinite 4s;
+}
+.container4 > .circle:nth-child(8){
+  animation: rotL calc(4*var(--rotTime)) linear infinite 6s;
+}
+
+.container5 > .circle:nth-child(1){
+  animation: rotR calc(8*var(--rotTime)) linear infinite;
+}
+.container5 > .circle:nth-child(3){
+  animation: rotR calc(8*var(--rotTime)) linear infinite 2s;
+}
+.container5 > .circle:nth-child(5){
+  animation: rotR calc(8*var(--rotTime)) linear infinite 4s;
+}
+.container5 > .circle:nth-child(7){
+  animation: rotR calc(8*var(--rotTime)) linear infinite 6s;
+}
+.container5 > .circle:nth-child(2){
+  animation: rotL calc(8*var(--rotTime)) linear infinite;
+}
+.container5 > .circle:nth-child(4){
+  animation: rotL calc(8*var(--rotTime)) linear infinite 2s;
+}
+.container5 > .circle:nth-child(6){
+  animation: rotL calc(8*var(--rotTime)) linear infinite 4s;
+}
+.container5 > .circle:nth-child(8){
+  animation: rotL calc(8*var(--rotTime)) linear infinite 6s;
+}
+
+.container6 > .circle:nth-child(1){
+  animation: rotR calc(10*var(--rotTime)) linear infinite;
+}
+.container6 > .circle:nth-child(3){
+  animation: rotR calc(10*var(--rotTime)) linear infinite 2s;
+}
+.container6 > .circle:nth-child(5){
+  animation: rotR calc(10*var(--rotTime)) linear infinite 4s;
+}
+.container6 > .circle:nth-child(7){
+  animation: rotR calc(10*var(--rotTime)) linear infinite 6s;
+}
+.container6 > .circle:nth-child(2){
+  animation: rotL calc(10*var(--rotTime)) linear infinite;
+}
+.container6 > .circle:nth-child(4){
+  animation: rotL calc(10*var(--rotTime)) linear infinite 2s;
+}
+.container6 > .circle:nth-child(6){
+  animation: rotL calc(10*var(--rotTime)) linear infinite 4s;
+}
+.container6 > .circle:nth-child(8){
+  animation: rotL calc(10*var(--rotTime)) linear infinite 6s;
+}
+
+.container7 > .circle:nth-child(1){
+  animation: rotR calc(20*var(--rotTime)) linear infinite;
+}
+.container7 > .circle:nth-child(3){
+  animation: rotR calc(20*var(--rotTime)) linear infinite 2s;
+}
+.container7 > .circle:nth-child(5){
+  animation: rotR calc(20*var(--rotTime)) linear infinite 4s;
+}
+.container7 > .circle:nth-child(7){
+  animation: rotR calc(20*var(--rotTime)) linear infinite 6s;
+}
+.container7 > .circle:nth-child(2){
+  animation: rotL calc(20*var(--rotTime)) linear infinite;
+}
+.container7 > .circle:nth-child(4){
+  animation: rotL calc(20*var(--rotTime)) linear infinite 2s;
+}
+.container7 > .circle:nth-child(6){
+  animation: rotL calc(20*var(--rotTime)) linear infinite 4s;
+}
+.container7 > .circle:nth-child(8){
+  animation: rotL calc(20*var(--rotTime)) linear infinite 6s;
+}
+
+.container8 > .circle:nth-child(1){
+  animation: rotR calc(30*var(--rotTime)) linear infinite;
+}
+.container8 > .circle:nth-child(3){
+  animation: rotR calc(30*var(--rotTime)) linear infinite 2s;
+}
+.container8 > .circle:nth-child(5){
+  animation: rotR calc(30*var(--rotTime)) linear infinite 4s;
+}
+.container8 > .circle:nth-child(7){
+  animation: rotR calc(30*var(--rotTime)) linear infinite 6s;
+}
+.container8 > .circle:nth-child(2){
+  animation: rotL calc(30*var(--rotTime)) linear infinite;
+}
+.container8 > .circle:nth-child(4){
+  animation: rotL calc(30*var(--rotTime)) linear infinite 2s;
+}
+.container8 > .circle:nth-child(6){
+  animation: rotL calc(30*var(--rotTime)) linear infinite 4s;
+}
+.container8 > .circle:nth-child(8){
+  animation: rotL calc(30*var(--rotTime)) linear infinite 6s;
+}
+
+.container9 > .circle:nth-child(1){
+  animation: rotR calc(40*var(--rotTime)) linear infinite;
+}
+.container9 > .circle:nth-child(3){
+  animation: rotR calc(40*var(--rotTime)) linear infinite 2s;
+}
+.container9 > .circle:nth-child(5){
+  animation: rotR calc(40*var(--rotTime)) linear infinite 4s;
+}
+.container9 > .circle:nth-child(7){
+  animation: rotR calc(40*var(--rotTime)) linear infinite 6s;
+}
+.container9 > .circle:nth-child(2){
+  animation: rotL calc(40*var(--rotTime)) linear infinite;
+}
+.container9 > .circle:nth-child(4){
+  animation: rotL calc(40*var(--rotTime)) linear infinite 2s;
+}
+.container9 > .circle:nth-child(6){
+  animation: rotL calc(40*var(--rotTime)) linear infinite 4s;
+}
+.container9 > .circle:nth-child(8){
+  animation: rotL calc(40*var(--rotTime)) linear infinite 6s;
+}
+
+
+@media only screen {
+} /* Define mobile styles */
+
+@media only screen and (max-width: 40em) {
+ } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+/* ------------------------ end of Small screens ----------------------------*/
+/* ------------------------ Medium screens ----------------------------------*/
+@media only screen and (min-width: 40.063em) {
+
+ } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .difTime{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(150px,auto));
+    grid-template-rows: repeat(3,minmax(150px,auto));
+  }
+  .container1{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .container2{
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .container3{
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .container4{
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .container5{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .container6{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .container7{
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .container8{
+    grid-column: 4;
+    grid-row: 2;
+  }
+  .container9{
+    grid-column: 1;
+    grid-row: 3;
+  }
+ } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+/* ------------------------ end of Medium screens ----------------------------------*/
+/* ------------------------ Large screens ----------------------------------*/
+@media only screen and (min-width: 64.063em) {
+
+ } /* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  .difTime{
+    display: grid;
+    grid-template-columns: repeat(6,minmax(150px,auto));
+    grid-template-rows: repeat(2,minmax(150px,auto));
+  }
+  .container1{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .container2{
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .container3{
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .container4{
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .container5{
+    grid-column: 5;
+    grid-row: 1;
+  }
+  .container6{
+    grid-column: 6;
+    grid-row: 1;
+  }
+  .container7{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .container8{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .container9{
+    grid-column: 3;
+    grid-row: 2;
+  }
+ } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+/* ------------------------ end of Large screens ----------------------------------*/
+/* ------------------------ XLarge screens ----------------------------------*/
+@media only screen and (min-width: 90.063em) {
+  .difTime{
+    display: grid;
+    grid-template-columns: repeat(6,minmax(150px,auto));
+    grid-template-rows: repeat(2,minmax(150px,auto));
+  }
+  .container1{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .container2{
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .container3{
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .container4{
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .container5{
+    grid-column: 5;
+    grid-row: 1;
+  }
+  .container6{
+    grid-column: 6;
+    grid-row: 1;
+  }
+  .container7{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .container8{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .container9{
+    grid-column: 3;
+    grid-row: 2;
+  }
+}
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+
+ } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+/* ------------------------ end of XLarge screens ----------------------------------*/
+/* ------------------------ XXLarge screens ----------------------------------*/
+@media only screen and (min-width: 120.063em) {
+
+   } /* min-width 1921px, xxlarge screens */
+*/
