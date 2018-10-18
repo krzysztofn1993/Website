@@ -13,6 +13,26 @@
     padding: 0 10px;
   }
 
+
+  #typewrite{
+    &:after{
+    content: ' |';
+    animation: typing 0.2s infinite ease-in-out alternate;
+    }
+  }
+
+  @keyframes typing{
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
   #welcome-section{
     overflow: hidden;
   }
