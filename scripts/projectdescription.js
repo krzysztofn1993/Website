@@ -26,7 +26,6 @@ $(window).resize(()=>{
 });
 
 function init(){
-  console.log(width);
   if(width < 768){
     $tiles.off('mouseenter mouseleave').on('click', render);
   }else{

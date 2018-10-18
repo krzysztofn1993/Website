@@ -15,7 +15,6 @@ function render(){
       currentLiteral += literal[letter];
       letter++;
       $text.html(currentLiteral);
-      console.log(currentLiteral);
       window.requestAnimationFrame(render);
     }else{
       cancelAnimationFrame(refTypeWriting);
