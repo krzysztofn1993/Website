@@ -123,8 +123,8 @@
     margin: 0 auto;
     display: flex;
     &__left{
-      display: flex;
-      align-items: center;
+      // display: flex;
+      // align-items: flex-start;
       flex: 1;
     }
     &__right{
