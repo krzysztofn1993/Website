@@ -8,7 +8,6 @@ const $aboutMeIcon = $header.find('.icon-styling:nth-child(2)');
 const $projectHeight = $('#projects').height();
 
 function render(){
-  console.log($(this));
   let windowHeight = $(window).innerHeight();
   if($(this).text() === 'work'){
     $(window).scrollTop((0.75*windowHeight));
