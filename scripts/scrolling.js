@@ -13,7 +13,7 @@ function render(){
   if($(this).text() === 'work'){
     $(window).scrollTop((0.75*windowHeight));
   }else if($(this).hasClass('fa-user')){
-    $(window).scrollTop(0.75*(windowHeight + $projectHeight));
+    $(window).scrollTop(0.78*(windowHeight + $projectHeight));
   }else{
     return;
   }
