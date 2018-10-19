@@ -2,50 +2,60 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 @media only screen {
+
   .body-wrapper{
     max-width: 1700px;
     min-width: 290px;
     height: 0;
     margin: 0 auto;
     position: relative;
-  }
+  } // end of body-wrapper
 
-  .header-layout{
+  .goUp{
     position: absolute;
-    margin-top: 20px;
-    z-index: 1;
-    display: flex;
-    width: 100%;
-    text-align: right;
-    justify-content: flex-end;
-    left: 0%;
-    .icon-styling{
-      margin: 0 10px;
-      color: #424242;
-      font-size: 1.5em;
-      transition: transform 2s ease-in-out;
-      &:nth-child(-n+2){
-        cursor: pointer;
-      }
-      &:hover{
-        transform: rotate(180deg);
-      }
+    font-size: 2.5em;
+    left: 90%;
+    bottom: 5%;
+    opacity: 1;
+    pointer-events: click;
+    -webkit-animation: moveUp 2s infinite linear forwards;
+    animation: moveUp 2s infinite linear forwards;
+    -webkit-transition: none;
+    transition: none;
+    &:nth-of-type(2){
+      -webkit-animation: moveUp 2s infinite linear forwards 1s;
+      animation: moveUp 2s infinite linear forwards 1s;
     }
-  }
+  } // end of goUp
+
+  @keyframes moveUp {
+    0%{
+      bottom: 5%;
+    }
+    50%{
+      opacity: 0.8;
+    }
+    100%{
+      opacity: 0;
+      bottom: 11%;
+    }
+  } // end of @k moveUp for .goUp
+
 
   .border-lr{
     border-left: 3px solid #69849c;
     border-right: 3px solid #69849c;
     padding: 0 10px;
-  }
+  } // end of border-lr
 
 
   #typewrite{
     &:after{
     content: ' |';
+    -webkit-animation: typing 0.2s infinite ease-in-out forwards;
     animation: typing 0.2s infinite ease-in-out forwards;
     }
-  }
+  } // end of #typewrite
 
   @keyframes typing{
     0%{
@@ -57,11 +67,11 @@
     100%{
       opacity: 1;
     }
-  }
+  } // end of @k typing for #typewrite
 
   #welcome-section{
     overflow: hidden;
-  }
+  } // end of #welcome-section
 
   .content-layout{
     padding: 0% 5% 5%;
@@ -73,6 +83,24 @@
     linear-gradient(45deg, transparent 60%, #699C81 60% ),
     #dcdcdc; //#DCDCDC
 
+    &--moving{
+      min-height: 60vh;
+      &:nth-child(even){
+        color: #424242;
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(20%, rgba(255,255,255,0.1)), to(rgba(255,255,255,0))),
+        #dcdcdc;
+        background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
+        #dcdcdc;
+      }
+      &:nth-child(odd){
+        color: SeaShell;
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(20%, rgba(255,255,255,0.1)), to(rgba(255,255,255,0))),
+        #333333;
+        background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
+        #333333;
+      }
+    }
+
     &__title{
       padding: 50px 0;
       &--primary{
@@ -80,7 +108,7 @@
         font-size: 3em;
       }
     }
-  }
+  } // end of content-layout
 
   .welcome-text{
     position: absolute;
@@ -91,45 +119,24 @@
     top: 24%;
     text-align: center;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
       &__content{
         margin: 20px 0;
         font-size: 2.5rem;
       }
-  }
-
-
-  .moving-sections-wrapper{
-    .content-layout{
-      min-height: 60vh;
-      &:nth-child(even){
-        color: #424242;
-        background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
-        #dcdcdc;
-      }
-      &:nth-child(odd){
-        color: SeaShell;
-        background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
-        #333333;
-      }
-    }
-  }
+  } // end of welcome-text
 
   .paral-element{ // paralax elements
     position: absolute;
 
-    & *{
-      z-index: 1;
-      height: auto;
-    }
-
-    // devicetop image
     &__device{
       display: block;
-      // max-height: 100px;
       content: url('../images/lap.png');
+      -webkit-filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
       filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
       &--position{
+        -webkit-transform: rotate(-20deg);
         transform: rotate(-20deg);
         top: 7%;
         left: 64%;
@@ -141,6 +148,7 @@
 
     &__bloom{ // bloom image
       width: 100%;
+      -webkit-filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
       filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
       &--position{
         z-index: 2;
@@ -153,53 +161,49 @@
 
     &__coffee{ // note image
       width: 100%;
+      -webkit-filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
       filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
       &--position{
         top: 63%;
         left: 11%;
         width: 14%;
       }
-    } // end of note image
+    } // end of coffe image
 
   } // end of paral-element
 
   .flex-column-layout{
     width: 80%;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     &__left{
       // display: flex;
       // align-items: flex-start;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
       flex: 1;
     }
     &__right{
       text-align: center;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
       flex: 1;
+      position: relative;
     }
-  }
-  .projects-gallery{
-    margin: 0 auto;
-    width: 80%;
-    height: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 40px;
   }
 } // end of only screen
 
 
 @media only screen and (max-width: 20em) {
-  .paral-element{ // paralax elements
-    // devicetop image
+  .paral-element{
     &__device{
       width: round(150 * 0.478) + px;
       height: 150px;
     }
   }
-}
+} // end of @media only screen and (max-width: 20em)
 
 @media only screen and (max-width: 25em) and (min-width: 20em) {
   .paral-element{ // paralax elements
@@ -209,7 +213,7 @@
       height: 175px;
     }
   }
-}
+} // end of @media only screen and (max-width: 25em) and (min-width: 20em)
 
 @media only screen and (min-width: 20em) {
   .welcome-text{
@@ -218,17 +222,16 @@
       font-size: 3rem;
     }
   }
-}
+} // emd of @media only screen and (min-width: 20em)
 
 @media only screen and (max-width: 35em) and (min-width: 25em) {
-  .paral-element{ // paralax elements
-    // devicetop image
+  .paral-element{
     &__device{
       width: round(200 * 0.478) + px;
       height: 200px;
     }
   }
-}
+} // end of @media only screen and (max-width: 35em) and (min-width: 25em)
 
 @media only screen and (max-width: 35em) {
   .content-layout{
@@ -243,6 +246,7 @@
     &__device{
       content: url('../images/phone.png');
       &--position{
+        -webkit-transform: rotate(10deg);
         transform: rotate(10deg);
         top: 60%;
         left: 60%;
@@ -277,21 +281,16 @@
 
   .flex-column-layout{
     width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     &__right{
       margin-top: 20px;
     }
   }
-  .projects-wrap{
-    flex-direction: column;
-  }
-  .projects-gallery{
-    &__tile{
-      width: 100%;
-      margin: 0 auto 20px;
-    }
-  }
-}
+
+} // // end of @media only screen and (max-width: 35em)
 
 @media only screen and (min-width: 35em) {
   .paral-element{
@@ -321,11 +320,7 @@
       }
     }// end of devicetop image
   }
-  .header-layout .icon-styling{
-    font-size: 2.2em;
-    margin: 0 15px;
-  }
-}
+} // end of @media only screen and (min-width: 35em)
 
 @media only screen and (min-width: 40em) {
   .text{
@@ -336,11 +331,10 @@
       &--position{
         top: -12%;
         left: -15%;
-
       }
     }
   }
-}
+} // end of @media only screen and (min-width: 40em)
 
 @media only screen and (min-width: 48em) {
   .welcome-text{
@@ -349,7 +343,7 @@
       font-size: 3.2rem;
     }
   }
-}
+} // end of @media only screen and (min-width: 48em)
 
 @media only screen and (min-width: 64em) {
   .text{
@@ -372,15 +366,4 @@
       }
     }
   }
-}
-
-
-@media only screen and (min-width: 35em) and (max-width: 64em) {
-  .projects-gallery{
-    flex-direction: row;
-    &__tile{
-      width: 45%;
-      margin: 0 auto 20px;
-    }
-  }
-}
+} // end of @media only screen and (min-width: 64em)

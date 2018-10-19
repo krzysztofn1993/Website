@@ -2,10 +2,8 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
-/**
- * Set up a decent box model on the root element
- */
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 16px;
   overflow-x: hidden;
@@ -29,12 +27,12 @@ body{
 *::before,
 *::after {
   text-align: inherit;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: inherit;
   margin: 0;
   padding: 0;
   font-family: inherit;
-  // border: 1px dashed red;
 }
 /**
  * Basic styles for links

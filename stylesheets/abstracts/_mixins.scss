@@ -22,21 +22,3 @@
     }
   }
 }
-
-/// Make a context based selector a little more friendly
-/// @author Hugo Giraudel
-/// @param {String} $context
-@mixin when-inside($context) {
-  #{$context} & {
-    @content;
-  }
-}
-
-
-@mixin project-TIle($name){
-  $url: "../images/#{$name}.png";
-  background-size: contain;
-  background-repeat: no-repeat;
-  background: linear-gradient(45deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01)),
-               url($url);
-}

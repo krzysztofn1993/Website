@@ -1,63 +1,45 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-// .head-fix{
-//   position: absolute;
-//   top: 10px;
-//   width: 100%;
-//   height: auto;
-//   z-index: 2;
-// }
-// .menu{
-//   width: 100%;
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: flex-end;
-//   margin: 0;
-//   &__element{
-//     padding: 0 8px;
-//     text-align: center;
-//     margin: 0 20px;
-//     display: inline;
-//   }
-//   .active{
-//     // border-left: 3px solid SeaShell;
-//     border-left: 3px solid #ff6347;
-//     border-right: 3px solid #ff6347;
-//     // border-radius: 50%;
-//   }
-// }
-// .beam{
-//   margin-left: 0%;
-//   width: 50%;
-//   height: 15px;
-//   background-color: #ff6347;
-//   border-radius: 0 0 0 15px;
-//   z-index: 0;
-// }
-//
-// @media only screen and (max-width: 20em){
-//   .menu{
-//     margin: 0 auto;
-//     justify-content: space-around;
-//     flex-direction: column;
-//     &__element{
-//       padding: 0 8px;
-//       margin: 10px auto;
-//       text-align: center;
-//       display: block;
-//     }
-//     .active{
-//       // border-bottom: 3px solid SeaShell;
-//       // border-radius: 0px;
-//     }
-//   }
-//   .beam{
-//     margin-left: 0%;
-//     width: 50%;
-//     height: 15px;
-//     background-color: #ff6347;
-//     border-radius: 0 0 0 15px;
-//     z-index: 0;
-//   }
-// }
+
+@media only screen {
+
+  .header-layout{
+    position: absolute;
+    margin-top: 20px;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    text-align: right;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    left: 0%;
+
+
+    // it has to be in .header-layout because of SPECIFICITY !!!!
+    .icon-styling{
+      margin: 0 10px;
+      color: #424242;
+      font-size: 1.5em;
+      &:nth-child(-n+2){
+        cursor: pointer;
+      }
+    } // end of icon-styling
+
+
+  } // end of header-layout
+} // end of only screen
+
+@media only screen and (min-width: 35em) {
+  // it has to be in header-layout because of SPECIFICITY
+  .header-layout{
+    .icon-styling{
+      font-size: 2.2em;
+      margin: 0 15px;
+    }
+  }
+
+}
