@@ -23,7 +23,7 @@ let paralax = (function() {
       $coffee.offset({top: $coffeeMove});
       $paral.offset({top: $paralMove});
     }
-    function updatePosition(){
+    function updatePosition(){      
       $windowScroll = $(window).scrollTop();
       $deviceMove =  $deviceOffset + $windowScroll/6;
       $bloomMove = $bloomOffset + $windowScroll/4;

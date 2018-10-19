@@ -1,3 +1,21 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer-layout{
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+
+}
+.footer-element{
+  font-size: 1em;
+  background:#424242;
+  color: Seashell;
+  // &:nth-child(odd){
+  // }
+  // &:nth-child(even){
+  //   background: #dcdcdc;
+  //   color: #424242;
+  // }
+}

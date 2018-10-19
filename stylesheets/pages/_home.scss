@@ -4,9 +4,35 @@
 @media only screen {
   .body-wrapper{
     max-width: 1700px;
+    min-width: 290px;
     height: 0;
     margin: 0 auto;
+    position: relative;
   }
+
+  .header-layout{
+    position: absolute;
+    margin-top: 20px;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    text-align: right;
+    justify-content: flex-end;
+    left: 0%;
+    .icon-styling{
+      margin: 0 10px;
+      color: #424242;
+      font-size: 1.5em;
+      transition: transform 2s ease-in-out;
+      &:nth-child(-n+2){
+        cursor: pointer;
+      }
+      &:hover{
+        transform: rotate(180deg);
+      }
+    }
+  }
+
   .border-lr{
     border-left: 3px solid #69849c;
     border-right: 3px solid #69849c;
@@ -267,14 +293,6 @@
   }
 }
 
-@media only screen and (min-width: 48em) {
-  .welcome-text{
-    font-size: 1.6rem;
-    &__content{
-      font-size: 3.2rem;
-    }
-  }
-}
 @media only screen and (min-width: 35em) {
   .paral-element{
     &__coffee{
@@ -303,8 +321,12 @@
       }
     }// end of devicetop image
   }
-
+  .header-layout .icon-styling{
+    font-size: 2.2em;
+    margin: 0 15px;
+  }
 }
+
 @media only screen and (min-width: 40em) {
   .text{
     font-size: 1.4em;
@@ -319,6 +341,16 @@
     }
   }
 }
+
+@media only screen and (min-width: 48em) {
+  .welcome-text{
+    font-size: 1.6rem;
+    &__content{
+      font-size: 3.2rem;
+    }
+  }
+}
+
 @media only screen and (min-width: 64em) {
   .text{
     font-size: 1.6rem;

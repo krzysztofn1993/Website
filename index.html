@@ -11,10 +11,17 @@
   integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
   crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="theme-color" content="#dcdcdc">
   </head>
   <body>
     <div class="body-wrapper">
+      <header class="header-layout">
+        <i class="icon-styling material-icons">work</i>
+        <i class="icon-styling fas fa-user"></i>
+        <a href="mailto:krzysztofn1993@gmail.com"><i class="icon-styling fas fa-at"></i></a>
+        <a href="https://www.linkedin.com/in/krzysztof-nowak1993/"><i class="icon-styling fab fa-linkedin"></i></a>
+      </header>
       <section class="content-layout" id="welcome-section">
           <div class="welcome-text">
             <h1 class="welcome-text__content"><span class="border-lr">Welcome!</span></h1><p id="typewrite"></p>
@@ -31,7 +38,7 @@
 
       </section>
       <div class="moving-sections-wrapper">
-        <section class="content-layout">
+        <section class="content-layout" id="projects">
           <h2 class="content-layout__title content-layout__title--primary"><span class="border-lr">My projects</span></h2>
             <div class="projects-gallery">
               <div class="projects-gallery__tile">
@@ -66,21 +73,29 @@
               </div>
             </div>
         </section>
-        <section class="content-layout">
+        <section class="content-layout" id="aboutme">
           <h2 class="content-layout__title content-layout__title--primary"><span class="border-lr">About me</span></h2>
           <div class="flex-column-layout">
             <div class="flex-column-layout__left">
-              <p class="text">My name is <strong>Krzysztof Nowak</strong> and I am learning to become <strong>Web Dev</strong>. I made this site from scratch and it is my main project which I am still developing. Recently I graduated Poznan University of Technology and now <strong>I have more time to spend on learning web development</strong>. </p>
+              <p class="text">My name is <strong>Krzysztof Nowak</strong> and I am learning to become <strong>Web Dev</strong>. I made this site from scratch and it is my main project which I am still developing. Recently I graduated Poznan University of Technology and now I can focus all my attention on learning Web development. </p>
             </div>
             <div class="flex-column-layout__right"><img src="images/conference.svg" alt="Oficially dressed comic person"></div>
           </div>
         </section>
+        <footer class="footer-layout">
+          <article class="footer-element">
+            <p>Page created by <strong>Krzysztof Nowak</strong> 2018.</p>
+          </article>
+          <article class="footer-element">
+            <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY.</a></div>
+          </div>
+          </article>
+      </footer>
       </div>
-       <!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-    </div> -->
     <script defer src="scripts/typewriter.js"></script>
     <script defer src="scripts/paralax.js"></script>
     <script defer src="scripts/projectdescription.js"></script>
+    <script defer src="scripts/scrolling.js"></script>
     <script defer src="scripts/main.js"></script>
   </body>
 </html>
