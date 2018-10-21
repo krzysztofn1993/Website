@@ -64,11 +64,11 @@ const game = (()=> {
     for(let i = 0; i < 3; i++){
       if(circles.search((i*3)%9) != -1 && circles.search((i*3)%9 + 1) != -1 && circles.search((i*3)%9 + 2) != -1 || (circles.search((i%9)) != -1 && circles.search((i+3)%9) != -1 && circles.search((i+6)%9) != -1) || (circles.search(0) != -1 && circles.search(4) != -1 && circles.search(8) != -1) || (circles.search(2) != -1 && circles.search(4) != -1 && circles.search(6) != -1) ){
         winner('CIRCLE');
-        break;
+        return;
       }
       if(crosses.search((i*3)%9) != -1 && crosses.search((i*3)%9 + 1) != -1 && crosses.search((i*3)%9 + 2) != -1 || (crosses.search((i%9)) != -1 && crosses.search((i+3)%9) != -1 && crosses.search((i+6)%9) != -1) || (crosses.search(0) != -1 && crosses.search(4) != -1 && crosses.search(8) != -1) || (crosses.search(2) != -1 && crosses.search(4) != -1 && crosses.search(6) != -1) ){
         winner('CROSS');
-        break;
+        return;
       }
     }
     if(moves > 8){
