@@ -4,7 +4,7 @@ var checkwindow = true;
 var defaultTxt = 'I\'m Batman! ^^(;,,;)^^';
 
 function preload(){
-  font = loadFont('../Titillium_Web/TitilliumWeb-Light.ttf');
+  font = loadFont('Titillium_Web/TitilliumWeb-Light.ttf');
 }
 
 function setup(){
