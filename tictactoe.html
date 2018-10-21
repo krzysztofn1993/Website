@@ -4,14 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Krzysztof Nowak | web developer portfolio</title>
-    <meta property="og:image" content="images/thumb.png">
     <meta property="og:description" content="Krzysztof Nowak - front-end developer which loves to learn new technologies. Already knows HTML5, CSS3, Bootstrap, JavaScript, jQuery">
     <meta property="og:title" content="Krzysztof Nowak | Web Developer portfolio">
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <link rel="stylesheet" href="styles/tic.css">
+    <link rel="stylesheet" href="stylesheets/tic.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link rel="icon" href="images/favicon.ico">
     <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -20,23 +16,50 @@
   <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.js"></script>
   </head>
   <body>
-    <div class="projects">
-      <p>Tic tac toe game for two players<br />
-      <span></span></p>
-      <div class="field"></div>
-      <div class="field"></div>
-      <div class="field"></div>
-      <div class="field"></div>
-      <div class="field"></div>
-      <div class="field"></div>
-      <div class="field"></div>
-      <div class="field"></div>
-      <div class="field"></div>
-      <div class="button">
-        <p>Restart</p>
+    <div class="project">
+      <h1 class="project__description">Tic tac toe game for two players<br />
+      <p class="project__player"></p></h1>
+      <div class="playground">
+        <div class="playground__square">
+          <div class="figure" data-number="0">
+          </div>
+        </div>
+        <div class="playground__square">
+          <div class="figure" data-number="1">
+          </div>
+        </div>
+        <div class="playground__square">
+          <div class="figure" data-number="2">
+          </div>
+        </div>
+        <div class="playground__square">
+          <div class="figure" data-number="3">
+          </div>
+        </div>
+        <div class="playground__square">
+          <div class="figure" data-number="4">
+          </div>
+        </div>
+        <div class="playground__square">
+          <div class="figure" data-number="5">
+          </div>
+        </div>
+        <div class="playground__square">
+          <div class="figure" data-number="6">
+          </div>
+        </div>
+        <div class="playground__square">
+          <div class="figure" data-number="7">
+          </div>
+        </div>
+        <div class="playground__square">
+          <div class="figure" data-number="8">
+          </div>
+        </div>
       </div>
+      <button class="restart" type="button" name="button">Restart</button>
     </div>
-    <script src="scripts/tictac.js"></script>
-
+    <script defer src="scripts/ttt-game.js"></script>
+    <script defer src="scripts/ttt-main.js"></script>
   </body>
 </html>
