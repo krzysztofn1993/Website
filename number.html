@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <title>Fun facts about numbers</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/number-style.css">
+  </head>
+  <body class="body-wrapper">
+    <div class="display-info">
+      <p>Logic in this project prevents from displaying same informations, also only 10 informations at once can be displayed.<br /> If it can't find other information about picked number last position will flash green. Only integers!</p>
+    </div>
+    <div class="project">
+      <h1 class="project__description">Fun facts about numbers!</h1>
+      <div class="project__picking">
+        <form class="project__form">
+          <label class="label"for="pickedNumber">Pick your number : </label>
+          <input id="pickedNumber" type="number" name="num" min="0" max="1000000000" placeholder="[0 - 1000000000]" step="1" required>
+          <button type="submit" id="send" name="button">That's my number!</button>
+        </form>
+      </div>
+      <div class="answers-wrapper">
+        <div class="project__answer">
+          <ul class="answer-list">
+          </ul>
+        </div>
+      </div>
+      </div>
+  <script src="scripts/number-number.js"></script>
+  <script src="scripts/number-main.js"></script>
+  </body>
+</html>
