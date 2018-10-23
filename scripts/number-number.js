@@ -9,7 +9,7 @@ var number = (function() {
   const $pickInput = $project.find('#pickedNumber');
   const $list = $project.find('.answer-list');
   const $info = $project.find('.info');
-  let url = 'http://numbersapi.com/';
+  let url = 'https://cors-anywhere.herokuapp.com/http://numbersapi.com/';
   let arrAnswers = [];
 
 
