@@ -45,7 +45,7 @@ var number = (function() {
       console.log('same');
       $list.children('li:last').css('color', 'green');
       setTimeout(function(){
-        $list.children('li').css('color', 'SeaShell');
+        $list.children('li').css('color', 'black');
       }, 400);
     }
     if($list.children('li').length > 10){
