@@ -27,9 +27,9 @@
         background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
         linear-gradient(45deg, transparent 60%, #699C81 60% ),
         #dcdcdc;
-        min-height: 100vh;
+        height: 100vh;
         & .section {
-          min-height: 100vh;
+          min-height: 568px;
         }
       }
     }
@@ -180,10 +180,13 @@
       max-width: 450px;
     }
   }
-} // end of @media only screen and (max-width: 35em) and (min-width: 25em)
+} // end of @media only screen and (max-width:767px )
 
 @media only screen and (max-width: 48em) {
   .section{
+    &__bloom-wrapper, &__coffee-wrapper{
+      z-index: 1;
+    }
     &__device-wrapper{
       top: 60%;
       left: 60%;
@@ -206,7 +209,7 @@
       max-width: 112px;
     }
   }
-} // // end of @media only screen and (max-width: 35em)
+} // // end of @media only screen and (max-width: 48em)
 
 @media only screen and (min-width: 48em) {
   .section{
@@ -230,7 +233,7 @@
       left: 14%;
     }
   }
-} // end of @media only screen and (min-width: 35em)
+} // end of @media only screen and (min-width: 48em)
 
 @media only screen and (min-width: 40em) {
   .text{
@@ -242,13 +245,6 @@
   }
 } // end of @media only screen and (min-width: 40em)
 
-@media only screen and (max-width: 48em) {
-  .section{
-    &__bloom-wrapper, &__coffee-wrapper{
-      z-index: 1;
-    }
-  }
-} // end of @media only screen and (min-width: 48em)
 @media only screen and (max-width: 64em)  {
   .welcome-text{
     left: 50%;

@@ -117,9 +117,9 @@ html {
         background: linear-gradient(to top right, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0)), #dcdcdc; }
       .body-wrapper__section-wrapper:nth-of-type(1) {
         background: linear-gradient(to top right, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0)), linear-gradient(45deg, transparent 60%, #699C81 60%), #dcdcdc;
-        min-height: 100vh; }
+        height: 100vh; }
         .body-wrapper__section-wrapper:nth-of-type(1) .section {
-          min-height: 100vh; }
+          min-height: 568px; }
 
   .section {
     margin: 0 auto;
@@ -223,6 +223,8 @@ html {
     .content-wrapper__right-column {
       max-width: 450px; } }
 @media only screen and (max-width: 48em) {
+  .section__bloom-wrapper, .section__coffee-wrapper {
+    z-index: 1; }
   .section__device-wrapper {
     top: 60%;
     left: 60%; }
@@ -263,9 +265,6 @@ html {
   .section__bloom-wrapper {
     top: -12%;
     left: -15%; } }
-@media only screen and (max-width: 48em) {
-  .section__bloom-wrapper, .section__coffee-wrapper {
-    z-index: 1; } }
 @media only screen and (max-width: 64em) {
   .welcome-text {
     left: 50%; } }
