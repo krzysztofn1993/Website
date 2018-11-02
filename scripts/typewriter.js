@@ -19,7 +19,7 @@ function render(){
     }else{
       cancelAnimationFrame(refTypeWriting);
     }
-  }, 45);
+  }, 55);
 }
 
 function init(){

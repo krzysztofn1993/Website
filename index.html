@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Krzysztof Nowak | Front-end Dev</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
     <meta name="description" content="Krzysztof Nowak - front-end developer which loves to learn new technologies. Already knows HTML5, CSS3, SASS, Bootstrap, JavaScript, jQuery">
     <meta property="og:title" content="Krzysztof Nowak | Front-end Dev">
     <meta name="og:image" content="images/ogimage.jpg">
@@ -16,115 +16,191 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="theme-color" content="#dcdcdc">
 
   </head>
-  <body>
-    <div class="body-wrapper">
-      <header class="header-layout">
-        <i class="icon-styling material-icons">work</i>
-        <i class="icon-styling fas fa-user"></i>
-        <a href="mailto:krzysztofn1993@gmail.com"><i class="icon-styling fas fa-at"></i></a>
-        <a href="https://www.linkedin.com/in/krzysztof-nowak1993/"><i class="icon-styling fab fa-linkedin"></i></a>
-      </header>
-      <section class="content-layout" id="welcome-section">
-          <div class="welcome-text">
-            <h1 class="welcome-text__content"><span class="border-lr">Welcome!</span></h1><p id="typewrite"></p>
-          </div>
-          <div class="paral-element paral-element__device--position">
-            <img class="paral-element__device" src="#" alt="Electronic device. The view is from the top">
-          </div>
-          <div class="paral-element paral-element__bloom--position">
-            <img class="paral-element__bloom" src="images/bloom.png" alt="Potted bloom with big green leaves. The view is from the top.">
-          </div>
-          <div class="paral-element paral-element__coffee--position">
-            <img class="paral-element__coffee" src="images/coffee.png" alt="Cup of coffe">
-          </div>
+  <body class="body-wrapper">
 
+  <!-- --------------------------- MENU ---------------------------  -->
+    <nav class="navbar navbar--styling">
+        <ul class="navbar__menu">
+          <a href="#Home" class="navbar__position"><li class="text text--light text--bold">Home</li></a>
+          <a href="#Projects" class="navbar__position"><li class="text text--light">Projects</li></a>
+          <a href="#Aboutme" class="navbar__position"><li class="text text--light">About Me</li></a>
+        </ul>
+        <div class="hamburger">
+          <span class="hamburger__dash hamburger__dash--top"></span>
+          <span class="hamburger__dash hamburger__dash--mid"></span>
+          <span class="hamburger__dash hamburger__dash--bottom"></span>
+        </div>
+    </nav>
+<!-- --------------------------- END of MENU ---------------------------  -->
+
+
+<!-- --------------------------- WELCOME SECTION ---------------------------  -->
+    <div class="body-wrapper__section-wrapper" id="Home">
+      <section class="section">
+        <div class="welcome-text">
+          <h1 class="welcome-text__greeting">Welcome!</h1>
+          <p id="typewrite" class="text text--bigger">Nice to meet you.<br />Let me show you what I do...</p>
+        </div>
+        <div class="section__device-wrapper">
+          <img class="section__img section__img--device" src="#" alt="Electronic device. The view is from the top">
+        </div>
+        <div class="section__bloom-wrapper">
+          <img class="section__img section__img--bloom" src="images/bloom.png" alt="Potted bloom with big green leaves. The view is from the top.">
+        </div>
+        <div class="section__coffee-wrapper">
+          <img class="section__img  section__img--coffee" src="images/coffee.png" alt="Cup of coffe">
+        </div>
+        <a href="#Projects" class="goDown"><i class="icon-styling fas fa-caret-up"></i></a>
+        <a href="#Projects" class="goDown"><i class="icon-styling icon-styling fas fa-caret-up"></i></a>
       </section>
-      <div class="moving-sections-wrapper">
-        <section class="content-layout content-layout--moving" id="projects">
-          <h2 class="content-layout__title content-layout__title--primary"><span class="border-lr">My projects</span></h2>
-            <div class="projects-gallery">
-              <div class="projects-gallery__tile">
-                <div class="projects-gallery__moving-part"><h3>Following text</h3><br /><p>Play with text made out of dots!<br />Best experience on PC's and laptops ;)</p></div>
-                <div class="projects-gallery__moving-part"><a href="text.html" class="projects-gallery__button"><i class="fas fa-glasses"></i></a></div>
-                <div class="projects-gallery__moving-part"><a href="https://github.com/krzysztofn1993/FollowingText" class="projects-gallery__button"><i class="fas fa-code"></i></a></div>
-                <img class="projects-gallery__img" src="images/followingText500.png" alt="Cliped picture of project in which dots follow your cursor">
+    </div>
+
+<!-- --------------------------- END OF WELCOME SECTION ---------------------------  -->
+
+
+
+<!-- --------------------------- PROJECTS SECTION ---------------------------  -->
+    <div class="body-wrapper__section-wrapper" id="Projects">
+      <section class="section">
+        <h2 class="section__title"><span class="border-lr">My projects</span></h2>
+          <div class="projects-gallery">
+
+            <div class="projects-gallery__tile">
+              <div class="projects-gallery__info">
+                <div class="projects-gallery__description">
+                  <h3>Following text</h3><br /><p>Play with text made out of dots! Best exp. on PC's and laptops ;)</p>
+                </div>
+                <a href="text.html" class="projects-gallery__button projects-gallery__button--left"><i class="fas fa-glasses"></i></a>
+                  <a href="https://github.com/krzysztofn1993/FollowingText" class="projects-gallery__button projects-gallery__button--right"><i class="fas fa-code"></i></a>
               </div>
-              <div class="projects-gallery__tile">
-                <div class="projects-gallery__moving-part"><h3>Fun facts about numbers</h3><br /><p>Pick your favourite number and find out some fun informations about it!</p></div>
-                <div class="projects-gallery__moving-part"><a href="number.html" class="projects-gallery__button"><i class="fas fa-glasses"></i></a></div>
-                <div class="projects-gallery__moving-part"><a href="https://github.com/krzysztofn1993/Numbers" class="projects-gallery__button"><i class="fas fa-code"></i></a></div>
-                <img class="projects-gallery__img" src="images/number500.png" alt="Cliped picture of project in which you can find out fun facts about numbers">
-              </div>
-              <div class="projects-gallery__tile">
-                <div class="projects-gallery__moving-part"><h3>PSD to HTML</h3><br /><p>My first project PSD to HTML from WeeklyWebDevChallange</p></div>
-                <div class="projects-gallery__moving-part"><a href="psdtohtml1.html" class="projects-gallery__button"><i class="fas fa-glasses"></i></a></div>
-                <div class="projects-gallery__moving-part"><a href="https://github.com/krzysztofn1993/PSD-to-HTML" class="projects-gallery__button"><i class="fas fa-code"></i></a></div>
-                <img class="projects-gallery__img" src="images/PSD500.png" alt="Cliped picture of webpage based on psd file">
-              </div>
-              <div class="projects-gallery__tile">
-                <div class="projects-gallery__moving-part"><h3>CSS animations</h3><br /><p>Fun with pure CSS!</p></div>
-                <div class="projects-gallery__moving-part"><a href="cssAnim.html" class="projects-gallery__button"><i class="fas fa-glasses"></i></a></div>
-                <div class="projects-gallery__moving-part"><a href="https://github.com/krzysztofn1993/CSS-Transistions-Animations" class="projects-gallery__button"><i class="fas fa-code"></i></a></div>
-                <img class="projects-gallery__img" src="images/cssAnim500.png" alt="Cliped picure of project with animations and transistions in CSS">
-              </div>
-              <div class="projects-gallery__tile">
-                <div class="projects-gallery__moving-part"><h3>Rain</h3><br /><p>Project visualizing rain :)</p></div>
-                <div class="projects-gallery__moving-part"><a href="rain.html" class="projects-gallery__button"><i class="fas fa-glasses"></i></a></div>
-                <div class="projects-gallery__moving-part"><a href="https://github.com/krzysztofn1993/Rain" class="projects-gallery__button"><i class="fas fa-code"></i></a></div>
-                <img class="projects-gallery__img" src="images/rain500.png" alt="Cliped picture of project which visualizes rain">
-              </div>
-              <div class="projects-gallery__tile">
-                <div class="projects-gallery__moving-part"><h3>Tic-Tac-Toe</h3><br /><p>Ordinary game for two players</p></div>
-                <div class="projects-gallery__moving-part"><a href="tictactoe.html" class="projects-gallery__button"><i class="fas fa-glasses"></i></a></div>
-                <div class="projects-gallery__moving-part"><a href="https://github.com/krzysztofn1993/TicTacToe" class="projects-gallery__button"><i class="fas fa-code"></i></a></div>
-                <img class="projects-gallery__img" src="images/ttt500.png" alt="Cliped picture of Tic-Tac-Toe game">
-              </div>
-              <div class="projects-gallery__tile">
-                <div class="projects-gallery__moving-part"><h3>My portfolio</h3><br /><p>I bet you recognize this page ;)</p></div>
-                <div class="projects-gallery__moving-part"><a href="#welcome-section" class="projects-gallery__button"><i class="fas fa-glasses"></i></a></div>
-                <div class="projects-gallery__moving-part"><a href="https://github.com/krzysztofn1993/Website" class="projects-gallery__button"><i class="fas fa-code"></i></a></div>
-                <img class="projects-gallery__img" src="images/portfolio500.png" alt="Cliped picture of portfolio">
-              </div>
+              <img class="projects-gallery__img" src="images/followingText500.png" alt="Cliped picture of project in which dots follow your cursor">
             </div>
-        </section>
-        <section class="content-layout content-layout--moving" id="aboutme">
-          <h2 class="content-layout__title content-layout__title--primary"><span class="border-lr">About me</span></h2>
-          <div class="flex-column-layout">
-            <div class="flex-column-layout__left">
-              <p class="text">My name is <strong>Krzysztof Nowak</strong> and I am learning to become <strong>Web Dev</strong>. I made this site from scratch and it is my main project which I am still developing. Recently I graduated Poznan University of Technology and now I can focus all my attention on learning Web development. </p>
+
+
+
+            <div class="projects-gallery__tile">
+              <div class="projects-gallery__info">
+                <div class="projects-gallery__description">
+                  <h3>Fun facts about numbers</h3><br /><p>Discover fun facts about your favourite number!</p>
+                </div>
+                <a href="number.html" class="projects-gallery__button projects-gallery__button--left"><i class="fas fa-glasses"></i></a>
+                <a href="https://github.com/krzysztofn1993/Numbers" class="projects-gallery__button projects-gallery__button--right"><i class="fas fa-code"></i></a>
+              </div>
+              <img class="projects-gallery__img" src="images/number500.png" alt="Cliped picture of project in which you can find out fun facts about numbers">
             </div>
-            <div class="flex-column-layout__right">
+
+
+            <div class="projects-gallery__tile">
+              <div class="projects-gallery__info">
+                <div class="projects-gallery__description">
+                  <h3>PSD to HTML</h3><br /><p>My first project PSD to HTML from WeeklyWebDevChallange</p>
+                </div>
+                <a href="psdtohtml1.html" class="projects-gallery__button projects-gallery__button--left"><i class="fas fa-glasses"></i></a>
+                <a href="https://github.com/krzysztofn1993/PSD-to-HTML" class="projects-gallery__button projects-gallery__button--right"><i class="fas fa-code"></i></a>
+              </div>
+              <img class="projects-gallery__img" src="images/PSD500.png" alt="Cliped picture of webpage based on psd file">
+            </div>
+
+
+            <div class="projects-gallery__tile">
+              <div class="projects-gallery__info">
+                <div class="projects-gallery__description">
+                  <h3>CSS animations</h3><br /><p>Fun with pure CSS!</p>
+                </div>
+                <a href="cssAnim.html" class="projects-gallery__button projects-gallery__button--left"><i class="fas fa-glasses"></i></a>
+                <a href="https://github.com/krzysztofn1993/CSS-Transistions-Animations" class="projects-gallery__button projects-gallery__button--right"><i class="fas fa-code"></i></a>
+              </div>
+              <img class="projects-gallery__img" src="images/cssAnim500.png" alt="Cliped picure of project with animations and transistions in CSS">
+            </div>
+
+
+            <div class="projects-gallery__tile">
+              <div class="projects-gallery__info">
+                <div class="projects-gallery__description">
+                  <h3>Rain</h3><br /><p>Project visualizing rain :)</p>
+                </div>
+                <a href="rain.html" class="projects-gallery__button projects-gallery__button--left"><i class="fas fa-glasses"></i></a>
+                <a href="https://github.com/krzysztofn1993/Rain" class="projects-gallery__button projects-gallery__button--right"><i class="fas fa-code"></i></a>
+              </div>
+              <img class="projects-gallery__img" src="images/rain500.png" alt="Cliped picture of project which visualizes rain">
+            </div>
+
+
+            <div class="projects-gallery__tile">
+              <div class="projects-gallery__info">
+                <div class="projects-gallery__description">
+                  <h3>Tic-Tac-Toe</h3><br /><p>Ordinary game for two players</p>
+                </div>
+                <a href="tictactoe.html" class="projects-gallery__button projects-gallery__button--left"><i class="fas fa-glasses"></i></a>
+                <a href="https://github.com/krzysztofn1993/TicTacToe" class="projects-gallery__button projects-gallery__button--right"><i class="fas fa-code"></i></a>
+              </div>
+              <img class="projects-gallery__img" src="images/ttt500.png" alt="Cliped picture of Tic-Tac-Toe game">
+            </div>
+
+
+            <div class="projects-gallery__tile">
+              <div class="projects-gallery__info">
+                <div class="projects-gallery__description">
+                  <h3>My portfolio</h3><br /><p>I bet you recognize this page ;)</p>
+                </div>
+                <a href="#welcome-section" class="projects-gallery__button projects-gallery__button--left"><i class="fas fa-glasses"></i></a>
+                <a href="https://github.com/krzysztofn1993/Website" class="projects-gallery__button projects-gallery__button--right"><i class="fas fa-code"></i></a>
+              </div>
+              <img class="projects-gallery__img" src="images/portfolio500.png" alt="Cliped picture of portfolio">
+            </div>
+
+
+          </div>
+      </section>
+    </div>
+<!-- --------------------------- END of PROJECTS SECTION ---------------------------  -->
+
+
+<!-- ---------------------------ABOUTME SECTION ---------------------------  -->
+    <div class="body-wrapper__section-wrapper" id="Aboutme">
+      <section class="section">
+        <h2 class="section__title"><span class="border-lr">About me</span></h2>
+          <div class="section__content-wrapper content-wrapper">
+            <div class="content-wrapper__left-column">
+              <p class="content-wrapper__text text text--bigger">My name is <strong>Krzysztof Nowak</strong> and I am learning to become <strong>Web Dev</strong>. I made this site from scratch and it is my main project which I am still developing. Recently I graduated Poznan University of Technology and now I can focus all my attention on learning Web development. </p>
+            </div>
+            <div class="content-wrapper__right-column">
               <img src="images/conference.svg" alt="Oficially dressed comic person">
             </div>
-            <a href="#" class="goUp"><i class="icon-styling fas fa-caret-up"></i></a>
-            <a href="#" class="goUp"><i class="icon-styling icon-styling fas fa-caret-up"></i></a>
+            <a href="#Home" class="goUp"><i class="icon-styling fas fa-caret-up"></i></a>
+            <a href="#Home" class="goUp"><i class="icon-styling icon-styling fas fa-caret-up"></i></a>
           </div>
-        </section>
-        <footer class="footer-layout">
-          <article class="footer-element">
-            <p>Page created by <strong>Krzysztof Nowak</strong> 2018.</p>
-          </article>
-          <article class="footer-element">
-            <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY.</a></div>
-          </article>
-        </footer>
-        </div>
-      </div>
-    <script defer src="scripts/typewriter.js"></script>
-    <script defer src="scripts/paralax.js"></script>
-    <script defer src="scripts/projectdescription.js"></script>
-    <script defer src="scripts/scrolling.js"></script>
-    <script defer src="scripts/main.js"></script>
+      </section>
+    </div>
+<!-- ---------------------------End of ABOUTME SECTION ---------------------------  -->
+
+<!-- --------------------------- FOOTER ---------------------------  -->
+<footer class="footer">
+  <article class="footer-element">
+    <p>Page created by <strong>Krzysztof Nowak</strong> 2018. Contact me <a href="mailto:krzysztofn1993@gmail.com" target="_blank"><i class="icon-styling icon-styling--gmail fas fa-at"></i></a>
+    <a href="https://www.linkedin.com/in/krzysztof-nowak1993/" target="_blank"><i class="icon-styling icon-styling--linkedIn fab fa-linkedin"></i></a>
+    </p>
+  </article>
+  <article class="footer-element">
+    <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY.</a></div>
+  </article>
+</footer>
+
+<!-- --------------------------- END of FOOTER ---------------------------  -->
+
+<!-- --------------------------- SCRIPTS ---------------------------  -->
+<script defer src="scripts/typewriter.js"></script>
+<script defer src="scripts/scrolling.js"></script>
+<script defer src="scripts/navbar.js"></script>
+<script defer src="scripts/main.js"></script>
+
   </body>
 </html>
-
-
-<!---->

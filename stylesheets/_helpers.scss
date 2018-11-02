@@ -1,0 +1,132 @@
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover, &:active, &:focus{
+    text-decoration: none;
+  }
+}
+
+
+.text{
+  font-size: 1em;
+  color: black;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  &--light{
+    color: Seashell;
+  }
+  &--darl{
+    color: #424242;
+  }
+  &--bold{
+    font-weight: bold;
+  }
+  &--bigger{
+    font-size: 1.2em;
+  }
+}
+
+
+:root{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+*,*:after,*:before{
+  box-sizing: inherit;
+  margin: inherit;
+  padding: inherit;
+}
+
+.border-lr{
+  border-left: 3px solid #69849c;
+  border-right: 3px solid #69849c;
+  padding: 0 10px;
+} // end of border-lr
+
+.goUp, .goDown{
+    position: absolute;
+    font-size: 2.5em;
+    left: 90%;
+    top: 90%;
+    opacity: 1;
+    pointer-events: click;
+  } // end of goUp
+
+  .goUp{
+    -webkit-animation: moveUp 2s infinite linear forwards;
+    animation: moveUp 2s infinite linear forwards;
+    &:nth-of-type(2){
+      -webkit-animation: moveUp 2s infinite linear forwards 1s;
+      animation: moveUp 2s infinite linear forwards 1s;
+    }
+  }
+  .goDown{
+    transform: rotate(180deg);
+    -webkit-animation: moveDown 2s infinite linear forwards;
+    animation: moveDown 2s infinite linear forwards;
+    &:nth-of-type(2){
+      -webkit-animation: moveDown 2s infinite linear forwards 1s;
+      animation: moveDown 2s infinite linear forwards 1s;
+    }
+  }
+
+  @keyframes moveUp {
+  0%{
+    top: 90%;
+  }
+  50%{
+    opacity: 0.8;
+  }
+  100%{
+    opacity: 0;
+    top: 84%;
+  }
+} // end of @k moveUp for .goUp
+@keyframes moveDown {
+  0%{
+    top: 84%;
+  }
+  50%{
+    opacity: 0.8;
+  }
+  100%{
+    opacity: 0;
+    top: 90%;
+  }
+} // end of @k moveDown for .goDown
+#typewrite{
+    &:after{
+    content: '|';
+    -webkit-animation: typing 0.3s infinite ease-in-out forwards;
+    animation: typing 0.3s infinite ease-in-out forwards;
+    }
+  } // end of #typewrite
+
+@keyframes typing{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.icon-styling{
+  margin: 0 1px;
+  font-size: 1.2em;
+  &--linkedIn{
+    color: #69849c;
+  }
+  &--gmail{
+    color: red;
+  }
+}
+html{
+  scroll-behavior: smooth;
+}

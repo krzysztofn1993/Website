@@ -1,0 +1,109 @@
+@media only screen {
+
+  .projects-gallery{
+
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 40px;
+
+
+    &__tile{
+      width: calc(33% - 20px);
+      margin: 10px;
+      padding: 0;
+      position: relative;
+      &:hover .projects-gallery__info{
+        opacity: 1;
+        pointer-events: auto;
+      }
+    } // end of __tile
+    &__info{
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      top: 0;
+      background: rgba(0,0,0,0.9);
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      transition: opacity 0.4s ease-in-out;
+      line-height: 1.2;
+    }
+    &__description{
+      position: absolute;
+      top: 0;
+      left: 6%;
+      width: 88%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    &__button{
+      position: absolute;
+      width: 50%;
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &--left{
+        border-right: 3px solid #69849c;
+        border-top: 3px solid #69849c;
+        left: 0;
+        top: 80%;
+      }
+      &--right{
+        border-top: 3px solid #69849c;
+        left: 50%;
+        top: 80%;
+      }
+    }
+    &__img{
+      width: 100%;
+      border-radius: 20px;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  .projects-gallery{
+    &__tile{
+      width: 100%;
+      margin: 0 auto 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 35em) and (max-width: 64em) {
+  .projects-gallery{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    font-size: 0.9em;
+    &__tile{
+      width: 45%;
+      margin: 0 auto 20px;
+    }
+  }
+}

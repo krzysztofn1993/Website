@@ -4,13 +4,17 @@
 @media only screen {
 
   .body-wrapper{
-    max-width: 1700px;
     min-width: 290px;
     height: 0;
     margin: 0 auto;
     position: relative;
   } // end of body-wrapper
 
+  .background-fill{
+    position: relative;
+    width: 100%;
+    background:red;
+  }
   .goUp{
     position: absolute;
     font-size: 2.5em;
@@ -70,9 +74,13 @@
   } // end of @k typing for #typewrite
 
   #welcome-section{
-    overflow: hidden;
+    overflow-y: hidden;
   } // end of #welcome-section
-
+  .limit-width{
+    max-width: 1700px;
+    margin: 0 auto;
+    position: relative;
+  }
   .content-layout{
     padding: 0% 5% 5%;
     overflow-x: hidden;
@@ -85,6 +93,7 @@
 
     &--moving{
       min-height: 60vh;
+      width: 100vw;
       &:nth-child(even){
         color: #424242;
         background: -webkit-gradient(linear, left bottom, right top, color-stop(20%, rgba(255,255,255,0.1)), to(rgba(255,255,255,0))),
