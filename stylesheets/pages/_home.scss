@@ -96,8 +96,6 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    // align-items: center;
-    // margin: 0;
     &__left-column, &__right-column{
       margin: 0;
       padding: 10px 0 20px;
@@ -114,7 +112,7 @@
 
   .welcome-text{
     position: absolute;
-    width: 50%;
+    width: auto;
     height: auto;
     padding: 0;
     left: 35%;
@@ -250,6 +248,7 @@
 }
 @media only screen and (min-width: 64em) {
   .welcome-text{
+    width: 50%;
     left: 39%;
     top: 27%;
   }

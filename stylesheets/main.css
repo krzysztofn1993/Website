@@ -183,7 +183,7 @@ html {
 
   .welcome-text {
     position: absolute;
-    width: 50%;
+    width: auto;
     height: auto;
     padding: 0;
     left: 35%;
@@ -279,6 +279,7 @@ html {
     left: 50%; } }
 @media only screen and (min-width: 64em) {
   .welcome-text {
+    width: 50%;
     left: 39%;
     top: 27%; }
 
