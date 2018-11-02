@@ -1,333 +1,246 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
-// -----------------------------------------------------------------------------
-@media only screen {
+@media only screen and (orientation: landscape) and (max-height: 690px) and(max-width: 48em){
+  .section{
+    &__device-wrapper, &__bloom-wrapper{
+      visibility: hidden;
+    }
+    .section__coffee-wrapper{
+      left: 2%;
+      top: 77%;
+    }
+  }
+}
 
+
+@media only screen {
   .body-wrapper{
     min-width: 290px;
-    height: 0;
     margin: 0 auto;
     position: relative;
-  } // end of body-wrapper
-
-  .background-fill{
-    position: relative;
-    width: 100%;
-    background:red;
-  }
-  .goUp{
-    position: absolute;
-    font-size: 2.5em;
-    left: 90%;
-    bottom: 5%;
-    opacity: 1;
-    pointer-events: click;
-    -webkit-animation: moveUp 2s infinite linear forwards;
-    animation: moveUp 2s infinite linear forwards;
-    -webkit-transition: none;
-    transition: none;
-    &:nth-of-type(2){
-      -webkit-animation: moveUp 2s infinite linear forwards 1s;
-      animation: moveUp 2s infinite linear forwards 1s;
-    }
-  } // end of goUp
-
-  @keyframes moveUp {
-    0%{
-      bottom: 5%;
-    }
-    50%{
-      opacity: 0.8;
-    }
-    100%{
-      opacity: 0;
-      bottom: 11%;
-    }
-  } // end of @k moveUp for .goUp
-
-
-  .border-lr{
-    border-left: 3px solid #69849c;
-    border-right: 3px solid #69849c;
-    padding: 0 10px;
-  } // end of border-lr
-
-
-  #typewrite{
-    &:after{
-    content: ' |';
-    -webkit-animation: typing 0.2s infinite ease-in-out forwards;
-    animation: typing 0.2s infinite ease-in-out forwards;
-    }
-  } // end of #typewrite
-
-  @keyframes typing{
-    0%{
-      opacity: 0;
-    }
-    50%{
-      opacity: 1;
-    }
-    100%{
-      opacity: 1;
-    }
-  } // end of @k typing for #typewrite
-
-  #welcome-section{
-    overflow-y: hidden;
-  } // end of #welcome-section
-  .limit-width{
-    max-width: 1700px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .content-layout{
-    padding: 0% 5% 5%;
     overflow-x: hidden;
-    position: relative;
-    min-height: 100vh;
-    color: #424242;
-    background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
-    linear-gradient(45deg, transparent 60%, #699C81 60% ),
-    #dcdcdc; //#DCDCDC
-
-    &--moving{
-      min-height: 60vh;
-      width: 100vw;
-      &:nth-child(even){
-        color: #424242;
-        background: -webkit-gradient(linear, left bottom, right top, color-stop(20%, rgba(255,255,255,0.1)), to(rgba(255,255,255,0))),
-        #dcdcdc;
-        background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
-        #dcdcdc;
-      }
-      &:nth-child(odd){
+    &__section-wrapper{
+      width: 100%;
+      min-height: 20vh;
+      &:nth-of-type(even){
+        z-index: 2;
         color: SeaShell;
         background: -webkit-gradient(linear, left bottom, right top, color-stop(20%, rgba(255,255,255,0.1)), to(rgba(255,255,255,0))),
         #333333;
         background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
         #333333;
       }
+      &:nth-of-type(odd){
+        color: #424242;
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(20%, rgba(255,255,255,0.1)), to(rgba(255,255,255,0))),
+        #dcdcdc;
+        background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
+        #dcdcdc;
+      }
+      &:nth-of-type(1){
+        background: linear-gradient(to top right, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0)),
+        linear-gradient(45deg, transparent 60%, #699C81 60% ),
+        #dcdcdc;
+        min-height: 100vh;
+        & .section {
+          min-height: 100vh;
+        }
+      }
+    }
+  }
+
+
+
+  .section{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1688px;
+    position: relative;
+    &__device-wrapper,&__bloom-wrapper,&__coffee-wrapper{
+        position: absolute;
+    }
+    &__device-wrapper{
+      -webkit-transform: rotate(-20deg);
+      transform: rotate(-20deg);
+      top: 9%;
+      left: 48%;
+      width: 43%;
+    }
+
+    &__bloom-wrapper{
+      z-index: 2;
+      top: -10%;
+      left: -10%;
+      width: 27%;
+    }
+
+    &__coffee-wrapper{
+      z-index: 2;
+      top: 63%;
+      left: 11%;
+      width: 14%;
+    }
+
+    &__img{
+      -webkit-filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
+      filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
+      width: 100%;
+      &--device{
+        display: block;
+        content: url('../images/lap.png');
+      }
     }
 
     &__title{
       padding: 50px 0;
-      &--primary{
-        text-align: center;
-        font-size: 3em;
-      }
+      text-align: center;
+      font-size: 3em;
     }
-  } // end of content-layout
+
+
+    &__content-wrapper{
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+
+  .content-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    // align-items: center;
+    // margin: 0;
+    &__left-column, &__right-column{
+      margin: 0;
+      padding: 10px 0 20px;
+    }
+    &__left-column{
+      flex: 2;
+    }
+    &__right-column{
+      max-width: 250px;
+      flex: 1;
+    }
+  }
+
 
   .welcome-text{
     position: absolute;
     width: auto;
     height: auto;
-    font-size: 1rem;
     padding: 0;
-    top: 24%;
+    left: 35%;
+    top: 27%;
     text-align: center;
-    left: 50%;
+    font-size: 1.2em;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-      &__content{
-        margin: 20px 0;
-        font-size: 2.5rem;
+    &__greeting{
+      font-size: 2.8em;
+      padding-bottom: 15px;
+      &:after{
+        content: '';
+        padding: 5px;
+        border-right: 3px solid #69849c;
       }
-  } // end of welcome-text
-
-  .paral-element{ // paralax elements
-    position: absolute;
-
-    &__device{
-      display: block;
-      content: url('../images/lap.png');
-      -webkit-filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
-      filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
-      &--position{
-        -webkit-transform: rotate(-20deg);
-        transform: rotate(-20deg);
-        top: 7%;
-        left: 64%;
-        width: 0%;
-        height: 0%;
-        }
-      }// end of device top image
-
-
-    &__bloom{ // bloom image
-      width: 100%;
-      -webkit-filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
-      filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
-      &--position{
-        z-index: 2;
-        top: -10%;
-        left: -10%;
-        width: 27%;
+      &::before{
+        content: '';
+        padding: 5px;
+        border-left: 3px solid #69849c;
       }
-    } //end of bloom
-
-
-    &__coffee{ // note image
-      width: 100%;
-      -webkit-filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
-      filter: blur(0px) drop-shadow(10px -4px 2px rgba(0,0,0,0.4));
-      &--position{
-        top: 63%;
-        left: 11%;
-        width: 14%;
-      }
-    } // end of coffe image
-
-  } // end of paral-element
-
-  .flex-column-layout{
-    width: 80%;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    &__left{
-      // display: flex;
-      // align-items: flex-start;
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-    }
-    &__right{
-      text-align: center;
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      position: relative;
     }
   }
-} // end of only screen
-
+}
 
 @media only screen and (max-width: 20em) {
-  .paral-element{
-    &__device{
-      width: round(150 * 0.478) + px;
-      height: 150px;
+  .section{
+    &__device-wrapper{
+      width: 25%;
+    }
+    &__title{
+      font-size: 2.6em;
     }
   }
 } // end of @media only screen and (max-width: 20em)
 
 @media only screen and (max-width: 25em) and (min-width: 20em) {
-  .paral-element{ // paralax elements
-    // devicetop image
-    &__device{
-      width: round(175 * 0.478) + px;
-      height: 175px;
-    }
+  .section__device-wrapper{
+    width: round(175 * 0.478) + px;
   }
 } // end of @media only screen and (max-width: 25em) and (min-width: 20em)
 
-@media only screen and (min-width: 20em) {
-  .welcome-text{
-    font-size: 1.4em;
-    &__content{
-      font-size: 3rem;
-    }
-  }
-} // emd of @media only screen and (min-width: 20em)
 
-@media only screen and (max-width: 35em) and (min-width: 25em) {
-  .paral-element{
-    &__device{
+@media only screen and (max-width:767px ) {
+  .section__device-wrapper{
       width: round(200 * 0.478) + px;
       height: 200px;
+      -webkit-transform: rotate(10deg);
+      transform: rotate(10deg);
+  }
+  .content-wrapper{
+    flex-direction: column;
+    margin: 0 auto;
+    &__left-column, &__right-column{
+      margin: 0 auto;
+      width: 100%;
+      padding: 0;
+    }
+    &__left-column{
+      padding-bottom: 20px;
+    }
+    &__right-column{
+      max-width: 450px;
     }
   }
 } // end of @media only screen and (max-width: 35em) and (min-width: 25em)
 
-@media only screen and (max-width: 35em) {
-  .content-layout{
-    padding: 0 3%;
-    &__title{
-      font-size: 2em;
+@media only screen and (max-width: 48em) {
+  .section{
+    &__device-wrapper{
+      top: 60%;
+      left: 60%;
     }
-  }
-
-  .paral-element{ // paralax elements
-    // devicetop image
-    &__device{
+    &__img--device{
       content: url('../images/phone.png');
-      &--position{
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-        top: 60%;
-        left: 60%;
-        // height: 100%;
-        }
-      }// end of devicetop image
-
-    &__bloom{ // bloom image
-      width: 100%;
-      &--position{
-        z-index: 2;
-        top: -14%;
-        left: -27%;
-        width: 69%;
-        max-width: 400px;
-        min-width: 200px;
-      }
-    } //end of bloom
-
-
-    &__coffee{ // note image
-      width: 100%;
-      &--position{
-        top: 60%;
-        left: 8%;
-        width: 25%;
-        min-width: 73px;
-        max-width: 112px;
-      }
-    } // end of note image
-  }
-
-  .flex-column-layout{
-    width: 90%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    &__right{
-      margin-top: 20px;
+    }
+    &__bloom-wrapper{
+      top: -14%;
+      left: -27%;
+      width: 69%;
+      max-width: 400px;
+      min-width: 200px;
+    }
+    &__coffee-wrapper{
+      top: 60%;
+      left: 8%;
+      width: 25%;
+      min-width: 73px;
+      max-width: 112px;
     }
   }
-
 } // // end of @media only screen and (max-width: 35em)
 
-@media only screen and (min-width: 35em) {
-  .paral-element{
-    &__coffee{
-      &--position{
-        min-width: 112px;
-        left: 14%;
-      }
-
+@media only screen and (min-width: 48em) {
+  .section{
+    &__device-wrapper{
+      top: 50%;
+      left: 48%;
+      max-width: 350px;
     }
-    &__bloom{
-      &--position{
+    &__img--device{
+      content: url('../images/lap.png');
+    }
+    &__bloom-wrapper{
         min-width: 360px;
         max-width: 425px;
         top: - 13%;
         left: -22%;
         width: 38%;
-      }
     }
-    &__device{
-      width: round(600 * 0.985) + px;
-      height: 600px;
-      &--position{
-        top: 50%;
-        left: 48%;
-        // height: 100%;
-      }
-    }// end of devicetop image
+    &__coffee-wrapper{
+      max-width: 112px;
+      left: 14%;
+    }
   }
 } // end of @media only screen and (min-width: 35em)
 
@@ -335,44 +248,49 @@
   .text{
     font-size: 1.4em;
   }
-  .paral-element{
-    &__bloom{
-      &--position{
-        top: -12%;
-        left: -15%;
-      }
-    }
+  .section__bloom-wrapper{
+    top: -12%;
+    left: -15%;
   }
 } // end of @media only screen and (min-width: 40em)
 
-@media only screen and (min-width: 48em) {
-  .welcome-text{
-    font-size: 1.6rem;
-    &__content{
-      font-size: 3.2rem;
+@media only screen and (max-width: 48em) {
+  .section{
+    &__bloom-wrapper, &__coffee-wrapper{
+      z-index: 1;
     }
   }
 } // end of @media only screen and (min-width: 48em)
-
-@media only screen and (min-width: 64em) {
-  .text{
-    font-size: 1.6rem;
-  }
+@media only screen and (max-width: 64em)  {
   .welcome-text{
-    left: 35%;
+    left: 50%;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .welcome-text{
+    left: 39%;
     top: 27%;
   }
-  .paral-element{
-    &__device{
-      &--position{
+  .section{
+    &__device-wrapper{
         top: 35%;
-      }
+        left: 55%;
+        max-width: none;
     }
-    &__bloom{
-      &--position{
+    &__bloom-wrapper{
         left: -10%;
         width: 40%;
       }
+    &__coffee-wrapper{
+      max-width: 150px;
+    }
+    }
+} // end of @media only screen and (min-width: 64em)
+@media only screen and (min-width: 80em) {
+  .section{
+    &__device-wrapper{
+      top: 20%;
+      width: 39%;
     }
   }
-} // end of @media only screen and (min-width: 64em)
+}

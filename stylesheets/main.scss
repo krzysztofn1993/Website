@@ -2,9 +2,8 @@
 
 
 @import
-  'helpers',
-  'home',
-  'navbar',
-  'projects-gallery',
-  'section',
-  'footer';
+  'helpers/helpers',
+  'pages/home',
+  'header/navbar',
+  'components/projects-gallery',
+  'footer/footer';

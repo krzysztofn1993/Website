@@ -459,13 +459,14 @@ html {
     text-align: center;
     margin: 0 auto;
     width: 100%;
-    border-top: 5px solid #69849c; }
+    border-top: 5px solid #69849c;
+    background: #424242; }
 
   .footer-element {
+    width: 90%;
     margin: 0 auto;
     padding: 2px 0;
     font-size: 1em;
-    background: #424242;
     color: Seashell; }
     .footer-element:first-of-type {
       padding: 5px 0; } }
