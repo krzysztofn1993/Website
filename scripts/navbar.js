@@ -49,6 +49,7 @@ var navbar = (function() {
       }else if($(window).scrollTop() >= $(item).offset().top - 2*$menuPositionHeight && $(window).scrollTop() <= $(item).offset().top + $(item).height() - 2*$menuPositionHeight){
         $($menuPosition[index]).addClass('text--bold');
       }else{
+        // console.log('remove class');
         $($menuPosition[index]).removeClass('text--bold');
       }
     });
@@ -58,6 +59,7 @@ var navbar = (function() {
   }
 
   function init(){
+    reload();
     $(window).resize(reload);
     $(window).scroll(throttled(10,active));
     $('.hamburger').click(toggleClass);
