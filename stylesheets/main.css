@@ -96,6 +96,13 @@ a {
 
 html {
   scroll-behavior: smooth; }
+  html::-webkit-scrollbar-track {
+    background-color: #dfdfdf; }
+  html::-webkit-scrollbar {
+    width: 5px;
+    background-color: #dfdfdf; }
+  html::-webkit-scrollbar-thumb {
+    background-color: #424242; }
 
 @media only screen {
   .body-wrapper {
