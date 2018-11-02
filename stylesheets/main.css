@@ -204,14 +204,30 @@ html {
 @media only screen and (max-width: 25em) and (min-width: 20em) {
   .section__device-wrapper {
     width: 84px; } }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 48em) {
+  .section__bloom-wrapper, .section__coffee-wrapper {
+    z-index: 1; }
   .section__img--device {
     content: url("../images/phone.png"); }
   .section__device-wrapper {
+    top: 60%;
+    left: 60%;
     width: 96px;
     height: 200px;
     -webkit-transform: rotate(10deg);
     transform: rotate(10deg); }
+  .section__bloom-wrapper {
+    top: -14%;
+    left: -27%;
+    width: 69%;
+    max-width: 400px;
+    min-width: 200px; }
+  .section__coffee-wrapper {
+    top: 60%;
+    left: 8%;
+    width: 25%;
+    min-width: 73px;
+    max-width: 112px; }
 
   .content-wrapper {
     flex-direction: column;
@@ -224,29 +240,15 @@ html {
       padding-bottom: 20px; }
     .content-wrapper__right-column {
       max-width: 450px; } }
-@media only screen and (max-width: 48em) {
-  .section__bloom-wrapper, .section__coffee-wrapper {
-    z-index: 1; }
-  .section__device-wrapper {
-    top: 60%;
-    left: 60%; }
-  .section__bloom-wrapper {
-    top: -14%;
-    left: -27%;
-    width: 69%;
-    max-width: 400px;
-    min-width: 200px; }
-  .section__coffee-wrapper {
-    top: 60%;
-    left: 8%;
-    width: 25%;
-    min-width: 73px;
-    max-width: 112px; } }
 @media only screen and (min-width: 48em) {
   .section__device-wrapper {
     top: 50%;
     left: 48%;
-    max-width: 350px; }
+    max-width: 350px;
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    width: auto;
+    height: auto; }
   .section__img--device {
     content: url("../images/lap.png"); }
   .section__bloom-wrapper {

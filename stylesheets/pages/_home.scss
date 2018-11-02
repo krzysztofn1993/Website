@@ -157,44 +157,21 @@
   }
 } // end of @media only screen and (max-width: 25em) and (min-width: 20em)
 
-
-@media only screen and (max-width:767px ) {
-  .section{
-    &__img--device{
-      content: url('../images/phone.png');
-    }
-    &__device-wrapper{
-      width: round(200 * 0.478) + px;
-      height: 200px;
-      -webkit-transform: rotate(10deg);
-      transform: rotate(10deg);
-  }
-}
-  .content-wrapper{
-    flex-direction: column;
-    margin: 0 auto;
-    &__left-column, &__right-column{
-      margin: 0 auto;
-      width: 100%;
-      padding: 0;
-    }
-    &__left-column{
-      padding-bottom: 20px;
-    }
-    &__right-column{
-      max-width: 450px;
-    }
-  }
-} // end of @media only screen and (max-width:767px )
-
 @media only screen and (max-width: 48em) {
   .section{
     &__bloom-wrapper, &__coffee-wrapper{
       z-index: 1;
     }
+    &__img--device{
+      content: url('../images/phone.png');
+    }
     &__device-wrapper{
       top: 60%;
       left: 60%;
+      width: round(200 * 0.478) + px;
+      height: 200px;
+      -webkit-transform: rotate(10deg);
+      transform: rotate(10deg);
     }
     &__bloom-wrapper{
       top: -14%;
@@ -211,6 +188,21 @@
       max-width: 112px;
     }
   }
+  .content-wrapper{
+    flex-direction: column;
+    margin: 0 auto;
+    &__left-column, &__right-column{
+      margin: 0 auto;
+      width: 100%;
+      padding: 0;
+    }
+    &__left-column{
+      padding-bottom: 20px;
+    }
+    &__right-column{
+      max-width: 450px;
+    }
+  }
 } // // end of @media only screen and (max-width: 48em)
 
 @media only screen and (min-width: 48em) {
@@ -219,6 +211,10 @@
       top: 50%;
       left: 48%;
       max-width: 350px;
+      -webkit-transform: rotate(-20deg);
+      transform: rotate(-20deg);
+      width: auto;
+      height: auto;
     }
     &__img--device{
       content: url('../images/lap.png');
