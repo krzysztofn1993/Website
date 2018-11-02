@@ -105,7 +105,7 @@ html {
     overflow-x: hidden; }
     .body-wrapper__section-wrapper {
       width: 100%;
-      min-height: 20vh; }
+      min-height: 568px; }
       .body-wrapper__section-wrapper:nth-of-type(even) {
         z-index: 2;
         color: SeaShell;
