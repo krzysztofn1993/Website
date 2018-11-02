@@ -97,12 +97,6 @@ a {
 html {
   scroll-behavior: smooth; }
 
-@media only screen and (orientation: landscape) and (max-height: 690px) and (max-width: 48em) {
-  .section__device-wrapper, .section__bloom-wrapper {
-    visibility: hidden; }
-  .section .section__coffee-wrapper {
-    left: 2%;
-    top: 77%; } }
 @media only screen {
   .body-wrapper {
     min-width: 290px;
@@ -293,6 +287,16 @@ html {
   .section__device-wrapper {
     top: 20%;
     width: 39%; } }
+@media only screen and (orientation: landscape) and (max-height: 690px) and (max-width: 48em) {
+  .section__device-wrapper, .section__bloom-wrapper {
+    visibility: hidden; }
+  .section .section__coffee-wrapper {
+    left: 2%;
+    top: 77%; } }
+@media only screen and (min-width: 48em) and (max-height: 40.625em) {
+  .section__device-wrapper {
+    top: 35%;
+    left: 75%; } }
 @media only screen {
   .navbar {
     z-index: 2;
