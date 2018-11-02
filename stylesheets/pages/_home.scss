@@ -159,12 +159,17 @@
 
 
 @media only screen and (max-width:767px ) {
-  .section__device-wrapper{
+  .section{
+    &__img--device{
+      content: url('../images/phone.png');
+    }
+    &__device-wrapper{
       width: round(200 * 0.478) + px;
       height: 200px;
       -webkit-transform: rotate(10deg);
       transform: rotate(10deg);
   }
+}
   .content-wrapper{
     flex-direction: column;
     margin: 0 auto;
@@ -190,9 +195,6 @@
     &__device-wrapper{
       top: 60%;
       left: 60%;
-    }
-    &__img--device{
-      content: url('../images/phone.png');
     }
     &__bloom-wrapper{
       top: -14%;

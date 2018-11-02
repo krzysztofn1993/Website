@@ -205,6 +205,8 @@ html {
   .section__device-wrapper {
     width: 84px; } }
 @media only screen and (max-width: 767px) {
+  .section__img--device {
+    content: url("../images/phone.png"); }
   .section__device-wrapper {
     width: 96px;
     height: 200px;
@@ -228,8 +230,6 @@ html {
   .section__device-wrapper {
     top: 60%;
     left: 60%; }
-  .section__img--device {
-    content: url("../images/phone.png"); }
   .section__bloom-wrapper {
     top: -14%;
     left: -27%;
