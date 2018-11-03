@@ -29,12 +29,14 @@ a {
 
 
 :root{
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
 *,*:after,*:before{
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
   margin: inherit;
   padding: inherit;
@@ -64,6 +66,7 @@ a {
     }
   }
   .goDown{
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     -webkit-animation: moveDown 2s infinite linear forwards;
     animation: moveDown 2s infinite linear forwards;
@@ -72,6 +75,19 @@ a {
       animation: moveDown 2s infinite linear forwards 1s;
     }
   }
+
+  @-webkit-keyframes moveUp {
+  0%{
+    top: 90%;
+  }
+  50%{
+    opacity: 0.8;
+  }
+  100%{
+    opacity: 0;
+    top: 84%;
+  }
+}
 
   @keyframes moveUp {
   0%{

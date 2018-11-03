@@ -7,11 +7,19 @@
     width: 100%;
     font-size: 1em;
     &__menu{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
       margin: 0 auto;
       max-width: 1688px;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: flex-end;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       list-style: none;
       width: 100%;
@@ -42,6 +50,7 @@
       height: 2px;
       background:Seashell;
       position: absolute;
+      -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
       &--top{
         top: 0;
@@ -57,16 +66,21 @@
       }
       &--open{
         &:nth-of-type(1){
+          -webkit-transform-origin: top right;
           transform-origin: top right;
+          -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
           width: 123%;
         }
         &:nth-of-type(2){
+          -webkit-transform: translateX(-650%);
           transform: translateX(-650%);
           opacity: 0;
         }
         &:nth-of-type(3){
+          -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
+          -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
           width: 123%;
           top: 21px;
@@ -78,6 +92,9 @@
 @media only screen and (max-width: 35em){
   .navbar{
     &__menu{
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
     &__position{
@@ -95,6 +112,7 @@
 @media only screen and (min-width:35em) and (max-width: 48em) {
   .navbar{
     &__menu{
+      -ms-flex-pack: distribute;
       justify-content: space-around;
     }
   }

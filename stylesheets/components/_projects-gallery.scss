@@ -43,6 +43,7 @@
       height: 100%;
       margin: 0;
       padding: 0;
+      -webkit-transition: opacity 0.4s ease-in-out;
       transition: opacity 0.4s ease-in-out;
       line-height: 1.2;
     }
@@ -52,9 +53,18 @@
       left: 6%;
       width: 88%;
       height: 80%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       text-align: center;
     }
@@ -62,8 +72,14 @@
       position: absolute;
       width: 50%;
       height: 20%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       &--left{
         border-right: 3px solid #69849c;
