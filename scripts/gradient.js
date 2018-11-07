@@ -45,7 +45,6 @@ var gradient = ( function() {
     if(e && angle !== e.target.dataset.angle ){
       angle = Number(e.target.dataset.angle);
     }
-    console.log(angle);
     checkColorsValues();
   }
 
