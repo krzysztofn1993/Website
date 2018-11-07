@@ -12,7 +12,7 @@ var gradient = ( function() {
   //variables
   let lastRangesValues = [30,70];
   let angle = 0;
-  let lastColorsValues = ['', ''];
+  let lastColorsValues = ['#388a8c', '#c04444'];
 
 
 
