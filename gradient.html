@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Krzysztof Nowak | Front-end dev / Gradient Generator</title>
+    <link rel="stylesheet" href="stylesheets/gradient-main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  </head>
+  <body class="body-wrapper">
+    <div class="picker">
+      <div class="picker__arrows">
+        <div class="picker__arr"></div>
+        <div class="picker__arr"></div>
+        <div class="picker__arr"></div>
+        <div class="picker__arr"></div>
+        <div class="picker__arr"></div>
+        <div class="picker__arr"></div>
+        <div class="picker__arr"></div>
+        <div class="picker__arr"></div>
+      </div>
+      <div class="picker__left-column">
+        <label for="color_1">Pick 1st color:</label>
+        <input id="color_1" class="picker__color" type="color" name="" value="#BADA55">
+        <label for="range_1">Where should it end [%]?</label>
+        <input id="range_1" class="picker__range" type="number" max="100" min="0" step="1" placeholder="[ 0 - 100% ]">
+        <label for="color_2">Pick 2nd color:</label>
+        <input id="color_2" class="picker__color" type="color" name="" value="#424242">
+        <label for="range_2">Where should it start [%]?</label>
+        <input id="range_2" class="picker__range" type="number"  max="100" min="0" step="1" placeholder="[ 0 - 100% ]">
+      </div>
+      <div class="picker__right-column">
+        <textarea class="picker__code" rows="8" readonly ><code></code></textarea>
+      </div>
+    </div>
+    <script src="scripts/gradient.js"></script>
+      <script src="scripts/gradient-main.js"></script>
+  </body>
+</html>
